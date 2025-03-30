@@ -91,3 +91,20 @@ box-shadow: 5px 6px 5px;
     bottom: 15%;
     left: 15%;
 }
+.scritte-immagini p:nth-child(1) {
+    background-color: blue;
+    padding: 5px;
+}
+
+.scritte-immagini p:nth-child(2) {
+    background-color: red;
+    padding: 5px;
+
+}
+
+.scritte-immagini p:nth-child(3) {
+    background-color: black ;
+    padding: 5px;
+
+}
+
