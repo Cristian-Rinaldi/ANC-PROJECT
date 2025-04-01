@@ -118,44 +118,43 @@ box-shadow: 5px 6px 5px;
     font-weight: bold;
     font-size: 20px; 
     z-index: 1;
+    text-decoration: none;
 }
 .clicca1{
    position: absolute;
    bottom: 287px;
    left: 367px;
+   transition: all 1000ms ease;
 }
+.clicca1:hover, .clicca2:hover, .clicca3:hover{
+    background-image: linear-gradient(45deg,green, white, red);
+    -webkit-background-clip:text ;
+    color: transparent;
+    transform: scale(1.1);
+}
+
 .clicca2{
    position: absolute;
    bottom: 287px;
    left: 832px;
+   transition: all 1000ms ease;
 }
 .clicca3{
    position: absolute;
    bottom: 287px;
    left: 1298px;
+   transition: all 1000ms ease;
 }
-.side-bar {
-    width: 30%;
-    height: 100vh; /* Occupa tutta l'altezza della finestra */
-    background-color: black;
-    color: white;
-    padding: 20px;
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: auto;
-}
+
 .container-sezioni{
     border-style: dashed;
     border-width: 2px;
-    width: 70%;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto;
+    width: 98.8vw;
+    
 }
 .sez-sanitaria {
 text-align: center;
-background-color: rgb(149, 198, 255);
+background:linear-gradient(to bottom,rgb(82, 172, 255),white);
 font-size: 20px;
 border-bottom: dashed;
 border-width: 2px;
@@ -174,7 +173,8 @@ padding: 15px;
     padding: 5px;
 }
 .sez-antincendio{
-background-color: rgb(255, 154, 154);
+background:linear-gradient(to bottom,rgb(245, 118, 118),white);
+
 font-size: 20px; 
 text-align: center;
 border-bottom: dashed;
@@ -193,7 +193,8 @@ padding: 15px;
         box-shadow: 10px 9px 10px black;
         }
 .sez-difesa{
-    background-color: rgb(222, 222, 222);
+    background:linear-gradient(to bottom, rgb(133, 133, 133),white);
+
     font-size: 20px;
     text-align: center;
 border-width: 5px;
