@@ -1,6 +1,10 @@
+html{
+    margin: 0;
+}
 body{
     margin: 0;
     background-color: antiquewhite;
+    height: 100%;
 }
 .flex{
     display: flex;
@@ -40,24 +44,27 @@ padding: 5px;
  left: 95%;
  top: 35px;
 }
+
 #img-scorrevoli{
    padding: 0;
    width: 100%;
-   height: 550px;
+   height:620px;
+   display: block;
 }
 .himg{
 gap: 162px;
 margin-top: 100px;
 position: absolute;
-bottom: 160px;
-left: 140px;
-flex-wrap: wrap;
+left: 150px;
+bottom: 110px;
+flex-wrap: nowrap;
 }
 
 .himg img{
     width: 300px;
     height: 200px;
     border: 2px solid white ;
+    
     
 }
 #intro{
@@ -81,15 +88,14 @@ border-right-color:red ;
 box-shadow: 5px 6px 5px;
     padding: 3px 6px;
     margin-top: 10px;
-
- 
 }
+
 .scritte-immagini{
     color: white;
-    gap: 315px;
+    gap: 320px;
     position: absolute;
-    bottom: 15%;
-    left: 15%;
+    bottom:40px;
+    left: 230px;
 }
 .scritte-immagini p:nth-child(1) {
     background-color: blue;
@@ -106,5 +112,102 @@ box-shadow: 5px 6px 5px;
     background-color: black ;
     padding: 5px;
 
+}
+.clicca{
+    color: white;
+    font-weight: bold;
+    font-size: 20px; 
+    z-index: 1;
+}
+.clicca1{
+   position: absolute;
+   bottom: 287px;
+   left: 367px;
+}
+.clicca2{
+   position: absolute;
+   bottom: 287px;
+   left: 832px;
+}
+.clicca3{
+   position: absolute;
+   bottom: 287px;
+   left: 1298px;
+}
+.side-bar {
+    width: 30%;
+    height: 100vh; /* Occupa tutta l'altezza della finestra */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: auto;
+}
+.container-sezioni{
+    border-style: dashed;
+    border-width: 2px;
+    width: 70%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+}
+.sez-sanitaria {
+text-align: center;
+background-color: rgb(149, 198, 255);
+font-size: 20px;
+border-bottom: dashed;
+border-width: 2px;
+padding: 15px;
+}
+.sez-sanitaria p{
+    margin: 0px 50px;
+   
+}
+.sez-sanitaria h2{
+    color: white;
+    background-color:blue;
+    box-shadow: 10px 9px 10px black;
+
+    display: inline-block;
+    padding: 5px;
+}
+.sez-antincendio{
+background-color: rgb(255, 154, 154);
+font-size: 20px; 
+text-align: center;
+border-bottom: dashed;
+border-width: 2px;
+padding: 15px;
+}
+.sez-antincendio p{
+    margin: 0px 50px;
+    }
+    .sez-antincendio h2{
+        margin:20px 0px;
+        background-color: red;
+        color: white;
+        display: inline-block;
+        padding: 5px;
+        box-shadow: 10px 9px 10px black;
+        }
+.sez-difesa{
+    background-color: rgb(222, 222, 222);
+    font-size: 20px;
+    text-align: center;
+border-width: 5px;
+padding: 15px;
+}
+.sez-difesa p{
+    margin: 0px 50px;
+}
+.sez-difesa h2{
+    margin:20px 0px;
+    background-color: black;
+    box-shadow: 10px 8px 10px black;
+    color: white;
+    display: inline-block;
+    padding: 5px;
 }
 
