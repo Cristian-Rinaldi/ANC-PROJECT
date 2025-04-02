@@ -1,5 +1,7 @@
-//--- I M M A G I N I    S C O R R E V O L I --------------
-const imgScorrevoli = document.getElementById("img-scorrevoli");
+
+// IMMAGINI SCORREVOLI
+
+const body = document.querySelector("body");
 let arrayImgScorrevoli = [
   "assets/pompiere.jpg",
   "assets/difesa-personale.jpg",
@@ -13,10 +15,36 @@ let arrayImgScorrevoli = [
   "assets/elisoccorso.jpeg",
   "assets/fuoco2.jpg",
 ];
+
 let index = 0;
 const idInterval = setInterval(() => {
-  imgScorrevoli.src = arrayImgScorrevoli[index];
-  index = (index + 1) % arrayImgScorrevoli.length;
-}, 3000);
+  body.style.backgroundImage = `url(${arrayImgScorrevoli[index]})`;
+  body.style.backgroundSize = 'cover'; 
+  body.style.backgroundPosition = 'center';
+  body.style.backgroundAttachment = 'fixed';
+  index = (index + 1) % arrayImgScorrevoli.length; 
+}, 3000); 
 
-// -----C L I C K   S U L L E  3 F O T O  P R I N C I P A L I  ------ 
+
+// MENU HAMBURGER
+
+//Apri Menu
+
+const hamburger = document.getElementById("hamburger");
+const menuHamburger = document.getElementById("menuHamburger");
+const closer = document.getElementById("close");
+const card = document.querySelector(".card");
+
+hamburger.addEventListener("click", () => {
+    menuHamburger.style.left = "0"; 
+    closer.style.display = "block"
+      menuHamburger.style.zIndex = "10";
+});
+
+// Chiud Menu
+
+closer.addEventListener("click", () => {
+  menuHamburger.style.left = "-450px"; 
+  card.addEventListener("mouseover", () => {
+  })
+})
