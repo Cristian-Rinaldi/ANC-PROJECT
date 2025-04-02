@@ -90,6 +90,11 @@
             display: flex;
             align-items: center;
         }
+        #next-button{
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -118,12 +123,11 @@
                 paziente in attesa di assistenza sanitaria più specializzata. La defibrillazione è l’uso di un
                 dispositivo (il defibrillatore) che eroga uno shock elettrico al cuore con l’obiettivo di ristabilire un
                 ritmo cardiaco normale.
-
-                
             </div>
+            <div class="arrow" id="next-button">&#8594;</div>
 
         </div>
-        <h2 class="title-iframe">COME SI EFFETTUA IL BLS-D?</h2>
+        <!-- <h2 class="title-iframe">COME SI EFFETTUA IL BLS-D?</h2>
 
         <section class="sez-iframe">
 
@@ -148,12 +152,32 @@
                     
                     Uso del defibrillatore
                     Defibrillazione precoce: Se è disponibile un defibrillatore, è fondamentale utilizzarlo il prima possibile. Il defibrillatore analizza il ritmo cardiaco e, se necessario, fornisce uno shock elettrico per interrompere un'aritmia grave (come la fibrillazione ventricolare). Il defibrillatore guida l'utente in ogni fase del processo con istruzioni vocali, rendendo possibile l'uso anche da parte di persone non esperte. La defibrillazione precoce aumenta significativamente le possibilità di sopravvivenza del paziente.</p>
-        </section>
+        </section> -->
 
 
     </main>
 
+<script>
+    const h2=document.querySelector("h2");
+    const immagine= document.querySelector("img")
+    const arrowReturn= document.getElementById("return-button")
+    const arrowNext= document.getElementById("next-button")
 
+arrowNext.addEventListener("click",()=>{
+    h2.innerText= "COME SI EFFETTUA IL BLS-D?";
+    immagine.src="display:none"
+    
+    immagine.outerHTML = `<iframe id="blsd" width="560" height="400"
+            src="https://www.youtube.com/embed/AQqpBztJUgY?si=6AkAOwJmScOopWCc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>`;
+})
+arrowReturn.addEventListener("click",()=>{
+    h2.innerText="CHE COS'È IL BLS-D?"
+    immagine.src="assets/catena blsd.jpg";
+})
+</script>
 
 </body>
 
