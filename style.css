@@ -5,6 +5,7 @@ body{
     margin: 0;
     background-color: antiquewhite;
     height: 100%;
+    
 }
 .flex{
     display: flex;
@@ -34,15 +35,6 @@ bottom: 10px;
     align-items: center;  
     width: 100%;
     letter-spacing: 3px;
-}
-#hamburger{
-    background-color: white;
-width: 30px;
-height: 30px;
-padding: 5px;
- position: absolute;
- left: 95%;
- top: 35px;
 }
 
 #img-scorrevoli{
