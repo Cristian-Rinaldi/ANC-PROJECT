@@ -53,7 +53,7 @@
             align-items: center;
             width: 600px;
             background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(13, 99, 247, 0.8), rgba(0, 0, 0, 0.7));
-
+         
             padding: 30px;
             letter-spacing: 0.5px;
             border-radius: 10px;
@@ -89,11 +89,13 @@
             font-size: 70px;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
         #next-button{
             font-size: 70px;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -109,7 +111,8 @@
         <div class="primo-video">
             <div class="arrow" id="return-button">&#8592;</div>
             <img src="assets/catena blsd.jpg" alt="">
-            <div class="descrizione">Il BLSD (Basic Life Support Defibrillation) è un insieme di manovre di primo
+            <div class="descrizione"><p>
+                Il BLSD (Basic Life Support Defibrillation) è un insieme di manovre di primo
                 soccorso che mirano a salvare la vita di una persona in caso di arresto cardiaco improvviso. Si tratta
                 di una combinazione di tecniche di rianimazione cardiopolmonare (RCP) e l'uso di un defibrillatore,
                 strumenti fondamentali per interrompere un'aritmia cardiaca grave (come la fibrillazione ventricolare) e
@@ -123,6 +126,7 @@
                 paziente in attesa di assistenza sanitaria più specializzata. La defibrillazione è l’uso di un
                 dispositivo (il defibrillatore) che eroga uno shock elettrico al cuore con l’obiettivo di ristabilire un
                 ritmo cardiaco normale.
+            </p>
             </div>
             <div class="arrow" id="next-button">&#8594;</div>
 
@@ -157,28 +161,131 @@
 
     </main>
 
-<script>
-    const h2=document.querySelector("h2");
-    const immagine= document.querySelector("img")
-    const arrowReturn= document.getElementById("return-button")
-    const arrowNext= document.getElementById("next-button")
 
-arrowNext.addEventListener("click",()=>{
-    h2.innerText= "COME SI EFFETTUA IL BLS-D?";
-    immagine.src="display:none"
+    <script>
+        const h2=document.querySelector("h2");
+        let immagine= document.querySelector(".primo-video img");
+        const arrowReturn= document.getElementById("return-button");
+        const arrowNext= document.getElementById("next-button");
+        const descrizione=document.querySelector(".descrizione")
+        const descrizioneOriginale = descrizione.innerHTML;
     
-    immagine.outerHTML = `<iframe id="blsd" width="560" height="400"
-            src="https://www.youtube.com/embed/AQqpBztJUgY?si=6AkAOwJmScOopWCc" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>`;
-})
-arrowReturn.addEventListener("click",()=>{
-    h2.innerText="CHE COS'È IL BLS-D?"
-    immagine.src="assets/catena blsd.jpg";
-})
-</script>
+        arrowNext.addEventListener("click",()=>{
+            h2.innerText= "COME SI EFFETTUA IL BLS-D?";
+            const iframe = document.createElement("iframe");
+            
+            iframe.style.marginTop="110px"
+            iframe.id = "blsd";
+            iframe.width = "500";
+            iframe.height = "450";
+            iframe.src = "https://www.youtube.com/embed/AQqpBztJUgY?autoplay=1&mute=1&si=6AkAOwJmScOopWCc";
+            iframe.title = "YouTube video player";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.referrerPolicy = "strict-origin-when-cross-origin";
+            iframe.allowFullscreen = true;
+            iframe.style.borderRadius = "10px";
+            descrizione.innerHTML = `  il processo di BLSD si sviluppa in diverse fasi critiche, ognuna delle quali è progettata per intervenire rapidamente e in modo efficace in una situazione di arresto cardiaco. Le fasi principali sono:
+
+                    Valutazione del paziente
+                    Controllo della coscienza: La prima cosa da fare in caso di sospetto arresto cardiaco è verificare se la persona è cosciente. Si può fare scuotendo delicatamente la persona e chiedendo se sta bene. Se non risponde, si considera il caso di un arresto cardiaco.
+                    
+                    Controllo della respirazione: Se la persona non è cosciente, bisogna verificare se respira. In caso di mancanza di respiro, è necessario procedere con la rianimazione.
+                    
+                    Chiamare aiuto
+                    Contattare i servizi di emergenza (118): È fondamentale chiamare immediatamente il numero di emergenza per avvisare che si è di fronte a un caso di arresto cardiaco. Più rapidamente arriva l’assistenza medica, maggiore sarà la probabilità di successo nel trattamento.
+                    
+                    RCP (Compressions) in attesa dell'intervento
+                    Manovre di RCP: Quando una persona smette di respirare o non ha battito cardiaco, è fondamentale iniziare immediatamente la RCP. La RCP consiste in compressioni toraciche e, quando possibile, respirazione artificiale. Le compressioni toraciche devono essere eseguite con una profondità di almeno 5 cm, a un ritmo di circa 100-120 compressioni al minuto. La respirazione artificiale, se possibile, aiuta a fornire ossigeno ai polmoni, ma le compressioni toraciche sono la parte più importante della manovra.
+                    
+                    Uso del defibrillatore
+                    Defibrillazione precoce: Se è disponibile un defibrillatore, è fondamentale utilizzarlo il prima possibile. Il defibrillatore analizza il ritmo cardiaco e, se necessario, fornisce uno shock elettrico per interrompere un'aritmia grave (come la fibrillazione ventricolare). Il defibrillatore guida l'utente in ogni fase del processo con istruzioni vocali, rendendo possibile l'uso anche da parte di persone non esperte. La defibrillazione precoce aumenta significativamente le possibilità di sopravvivenza del paziente.`;
+            
+            immagine.replaceWith(iframe);
+            immagine = iframe;
+        });
+    
+        arrowReturn.addEventListener("click",()=>{
+            h2.innerText="CHE COS'È IL BLS-D?";
+            const newImage = document.createElement("img");
+            newImage.src = "assets/catena blsd.jpg";
+            newImage.alt = "";
+            newImage.style.width = "500px";
+            newImage.style.height = "450px";
+            newImage.style.borderRadius = "10px";
+            descrizione.innerHTML=descrizioneOriginale
+            immagine.replaceWith(newImage);
+            immagine = newImage;
+        });
+    </script>
+    
+    
+
 
 </body>
 
-</html>
+</html> 
+ <!-- const content = [
+{
+    video: "https://www.youtube.com/embed/Q4w851Xiy70?si=-WSQY9V5Hg7UtFLK",
+    title: "Prevenzione Incendi",
+    description: `La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e proteggere persone, edifici e l’ambiente. Ciò include:
+    - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
+    - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
+    - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi antincendio.
+    - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme e estinzione.`
+},
+{
+    video: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8", 
+    title: "Sicurezza Antincendio",
+    description: `La sicurezza antincendio si concentra sulla protezione contro il rischio di incendio, attraverso impianti e tecnologie avanzate. Ecco cosa fare:
+    - Utilizzare dispositivi di sicurezza adeguati.
+    - Aggiornare regolarmente le attrezzature antincendio.
+    - Monitorare costantemente le condizioni di sicurezza degli ambienti.`
+},
+{
+    video: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9",
+     title: "Sistemi Antincendio",
+    description: `Le tecnologie moderne per la protezione antincendio includono:
+    - Sistemi di rilevamento automatico degli incendi.
+    - Sistemi di soppressione automatica delle fiamme.
+    - Monitoraggio remoto delle condizioni di sicurezza.`
+}
+];
+
+let currentIndex = 0;
+
+
+function updateContent() {
+const iframe = document.getElementById("video");
+const title = document.querySelector("#description h2");
+const paragraph = document.querySelector("#description p");
+
+iframe.src = content[currentIndex].video;
+title.textContent = content[currentIndex].title;
+paragraph.textContent = content[currentIndex].description;
+}
+
+document.getElementById("next-button").addEventListener("click", () => {
+currentIndex = (currentIndex + 1) % content.length;
+updateContent();
+});
+
+updateContent();
+
+
+document.getElementById("return-button").addEventListener("click", () => {
+content.splice(currentIndex, 1); 
+currentIndex = (currentIndex === content.length) ? 0 : currentIndex; 
+
+
+   // Se l'ultimo elemento è stato rimosso, torna al primo
+   if (currentIndex >= content.length) {
+        currentIndex = content.length - 1;
+    }
+
+    
+updateContent();
+});
+
+updateContent();  -->
