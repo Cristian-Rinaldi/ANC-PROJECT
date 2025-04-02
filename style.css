@@ -20,12 +20,14 @@ body{
     height: 100px;
     width: 100%;
 }
+
 #logo-ita-stivale{
 height: 80px;
 width: 80px;
 position: absolute;
 bottom: 10px;
 }
+
 .intestazione h1{
     text-shadow: 2px 2px 5px black;
   word-spacing: 50px;
@@ -43,6 +45,7 @@ bottom: 10px;
    height:620px;
    display: block;
 }
+
 .himg{
 gap: 162px;
 margin-top: 100px;
