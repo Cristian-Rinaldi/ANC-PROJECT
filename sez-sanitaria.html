@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PRIMO SOCCORSO</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(to right, green, white, red);
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid black;
+        }
+
+        main {
+            min-height: 100vh;
+            background-image: url(assets/caduceo.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .primo-video {
+            padding-top: 40px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .primo-video img {
+            width: 500px;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        .descrizione {
+            display: flex;
+            align-items: center;
+            width: 600px;
+            background: linear-gradient(to right, black, rgb(13, 99, 247), black);
+            padding: 30px;
+            letter-spacing: 0.5px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        h2 {
+            margin: 0;
+            color: red;
+            font-size: 50px;
+            padding-top: 30px;
+        }
+        .title-iframe{
+            margin-top: 100px;
+        }
+
+        #blsd {
+            border-radius: 10px;
+            float: left;
+            margin-right: 20px;
+            z-index: 10;
+        }
+.sez-iframe p{
+            margin-right: 40px;
+            font-size: 25px;
+            color: white;
+            background-color: black;
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <h1>PRIMO SOCCORSO</h1>
+        <img style="margin-left: 10px;" src="assets/esculapio.png" width="70px" alt="esculapio">
+    </header>
+    <main>
+        <h2>CHE COS'È IL BLS-D?</h2>
+        <div class="primo-video">
+
+            <img src="assets/catena blsd.jpg" alt="">
+            <div class="descrizione">Il BLSD (Basic Life Support Defibrillation) è un insieme di manovre di primo
+                soccorso che mirano a salvare la vita di una persona in caso di arresto cardiaco improvviso. Si tratta
+                di una combinazione di tecniche di rianimazione cardiopolmonare (RCP) e l'uso di un defibrillatore,
+                strumenti fondamentali per interrompere un'aritmia cardiaca grave (come la fibrillazione ventricolare) e
+                ripristinare un ritmo cardiaco regolare. L’arresto cardiaco improvviso è una delle principali cause di
+                morte, ma grazie al BLSD, è possibile aumentare notevolmente le probabilità di sopravvivenza se si
+                interviene rapidamente. Il BLSD è una competenza che, se appresa e messa in pratica, può fare la
+                differenza tra la vita e la morte di una persona.
+
+                Il termine "Basic Life Support" indica l'insieme di interventi di primo soccorso che non richiedono
+                l’uso di tecniche avanzate o l’intervento di un medico, ma che sono fondamentali per stabilizzare il
+                paziente in attesa di assistenza sanitaria più specializzata. La defibrillazione è l’uso di un
+                dispositivo (il defibrillatore) che eroga uno shock elettrico al cuore con l’obiettivo di ristabilire un
+                ritmo cardiaco normale.
+
+
+            </div>
+
+        </div>
+        <h2 class="title-iframe">COME SI EFFETTUA IL BLS-D?</h2>
+
+        <section class="sez-iframe">
+
+            <iframe id="blsd" width="560" height="400"
+            src="https://www.youtube.com/embed/AQqpBztJUgY?si=6AkAOwJmScOopWCc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+            
+                <p>  l processo di BLSD si sviluppa in diverse fasi critiche, ognuna delle quali è progettata per intervenire rapidamente e in modo efficace in una situazione di arresto cardiaco. Le fasi principali sono:
+
+                    Valutazione del paziente
+                    Controllo della coscienza: La prima cosa da fare in caso di sospetto arresto cardiaco è verificare se la persona è cosciente. Si può fare scuotendo delicatamente la persona e chiedendo se sta bene. Se non risponde, si considera il caso di un arresto cardiaco.
+                    
+                    Controllo della respirazione: Se la persona non è cosciente, bisogna verificare se respira. In caso di mancanza di respiro, è necessario procedere con la rianimazione.
+                    
+                    Chiamare aiuto
+                    Contattare i servizi di emergenza (118): È fondamentale chiamare immediatamente il numero di emergenza per avvisare che si è di fronte a un caso di arresto cardiaco. Più rapidamente arriva l’assistenza medica, maggiore sarà la probabilità di successo nel trattamento.
+                    
+                    RCP (Compressions) in attesa dell'intervento
+                    Manovre di RCP: Quando una persona smette di respirare o non ha battito cardiaco, è fondamentale iniziare immediatamente la RCP. La RCP consiste in compressioni toraciche e, quando possibile, respirazione artificiale. Le compressioni toraciche devono essere eseguite con una profondità di almeno 5 cm, a un ritmo di circa 100-120 compressioni al minuto. La respirazione artificiale, se possibile, aiuta a fornire ossigeno ai polmoni, ma le compressioni toraciche sono la parte più importante della manovra.
+                    
+                    Uso del defibrillatore
+                    Defibrillazione precoce: Se è disponibile un defibrillatore, è fondamentale utilizzarlo il prima possibile. Il defibrillatore analizza il ritmo cardiaco e, se necessario, fornisce uno shock elettrico per interrompere un'aritmia grave (come la fibrillazione ventricolare). Il defibrillatore guida l'utente in ogni fase del processo con istruzioni vocali, rendendo possibile l'uso anche da parte di persone non esperte. La defibrillazione precoce aumenta significativamente le possibilità di sopravvivenza del paziente.</p>
+        </section>
+
+
+    </main>
+
+
+
 </body>
+
 </html>

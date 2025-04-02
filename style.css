@@ -5,7 +5,7 @@ body{
     margin: 0;
     background-color: antiquewhite;
     height: 100%;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .flex{
     display: flex;
@@ -89,6 +89,13 @@ box-shadow: 5px 6px 5px;
     bottom:40px;
     left: 230px;
 }
+.scritte-immagini p:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(45deg,green, white, red);
+    -webkit-background-clip:text ;
+    color: transparent;
+    transform: scale(1.1);
+}
 .scritte-immagini p:nth-child(1) {
     background-color: blue;
     padding: 5px;
@@ -119,10 +126,7 @@ box-shadow: 5px 6px 5px;
    transition: all 1000ms ease;
 }
 .clicca1:hover, .clicca2:hover, .clicca3:hover{
-    background-image: linear-gradient(45deg,green, white, red);
-    -webkit-background-clip:text ;
-    color: transparent;
-    transform: scale(1.1);
+   
 }
 
 .clicca2{
