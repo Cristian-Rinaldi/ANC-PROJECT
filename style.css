@@ -1,0 +1,206 @@
+html{
+    margin: 0;
+}
+body{
+    margin: 0;
+    background-color: antiquewhite;
+    height: 100%;
+    
+}
+.flex{
+    display: flex;
+}
+.relative{
+    position: relative;
+}
+
+.intestazione{
+    position: relative;
+    background: linear-gradient(to right ,green,white,red);
+    height: 100px;
+    width: 100%;
+}
+#logo-ita-stivale{
+height: 80px;
+width: 80px;
+position: absolute;
+bottom: 10px;
+}
+.intestazione h1{
+    text-shadow: 2px 2px 5px black;
+  word-spacing: 50px;
+    color: black;
+    text-align: center;  
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+#img-scorrevoli{
+   padding: 0;
+   width: 100%;
+   height:620px;
+   display: block;
+}
+.himg{
+gap: 162px;
+margin-top: 100px;
+position: absolute;
+left: 150px;
+bottom: 110px;
+flex-wrap: nowrap;
+}
+
+.himg img{
+    width: 300px;
+    height: 200px;
+    border: 2px solid white ;
+    
+    
+}
+#intro{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 150px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    max-width: 650px;
+    background-color: white;
+    opacity: 0.9;
+    border-style: ridge;
+    border-width: 10px;
+    border-left-color: green;
+    border-top-color:green;
+    border-bottom-color:red;
+border-right-color:red ;
+box-shadow: 5px 6px 5px;
+    padding: 3px 6px;
+    margin-top: 10px;
+}
+
+.scritte-immagini{
+    color: white;
+    gap: 320px;
+    position: absolute;
+    bottom:40px;
+    left: 230px;
+}
+.scritte-immagini p:nth-child(1) {
+    background-color: blue;
+    padding: 5px;
+}
+
+.scritte-immagini p:nth-child(2) {
+    background-color: red;
+    padding: 5px;
+
+}
+
+.scritte-immagini p:nth-child(3) {
+    background-color: black ;
+    padding: 5px;
+
+}
+.clicca{
+    color: white;
+    font-weight: bold;
+    font-size: 20px; 
+    z-index: 1;
+    text-decoration: none;
+}
+.clicca1{
+   position: absolute;
+   bottom: 287px;
+   left: 367px;
+   transition: all 1000ms ease;
+}
+.clicca1:hover, .clicca2:hover, .clicca3:hover{
+    background-image: linear-gradient(45deg,green, white, red);
+    -webkit-background-clip:text ;
+    color: transparent;
+    transform: scale(1.1);
+}
+
+.clicca2{
+   position: absolute;
+   bottom: 287px;
+   left: 832px;
+   transition: all 1000ms ease;
+}
+.clicca3{
+   position: absolute;
+   bottom: 287px;
+   left: 1298px;
+   transition: all 1000ms ease;
+}
+
+.container-sezioni{
+    border-style: dashed;
+    border-width: 2px;
+    width: 98.8vw;
+    
+}
+.sez-sanitaria {
+text-align: center;
+background:linear-gradient(to bottom,rgb(82, 172, 255),white);
+font-size: 20px;
+border-bottom: dashed;
+border-width: 2px;
+padding: 15px;
+}
+.sez-sanitaria p{
+    margin: 0px 50px;
+   
+}
+.sez-sanitaria h2{
+    color: white;
+    background-color:blue;
+    box-shadow: 10px 9px 10px black;
+
+    display: inline-block;
+    padding: 5px;
+}
+.sez-antincendio{
+background:linear-gradient(to bottom,rgb(245, 118, 118),white);
+
+font-size: 20px; 
+text-align: center;
+border-bottom: dashed;
+border-width: 2px;
+padding: 15px;
+}
+.sez-antincendio p{
+    margin: 0px 50px;
+    }
+    .sez-antincendio h2{
+        margin:20px 0px;
+        background-color: red;
+        color: white;
+        display: inline-block;
+        padding: 5px;
+        box-shadow: 10px 9px 10px black;
+        }
+.sez-difesa{
+    background:linear-gradient(to bottom, rgb(133, 133, 133),white);
+
+    font-size: 20px;
+    text-align: center;
+border-width: 5px;
+padding: 15px;
+}
+.sez-difesa p{
+    margin: 0px 50px;
+}
+.sez-difesa h2{
+    margin:20px 0px;
+    background-color: black;
+    box-shadow: 10px 8px 10px black;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+}
+
