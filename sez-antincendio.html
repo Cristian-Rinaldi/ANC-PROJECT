@@ -4,202 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ANTINCENDIO</title>
     <style>
-        html {
-            margin: 0;
-        }
-
+        html,
         body {
+            height: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin: 0;
-            background-image: url("https://www.shutterstock.com/shutterstock/videos/1107284033/thumb/1.jpg?ip=x480");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
         }
 
-        .intestazione {
-            position: relative;
-            background: linear-gradient(to right, green, white, red);
-            height: 100px;
+        .header {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(249, 3, 3, 0.8), rgba(0, 0, 0, 0.7));
             width: 100%;
+            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            border-bottom: 2px solid black;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.468);
+            letter-spacing:4px;
+            word-spacing: 10px;
+            font-size: 16px;
+            color: white;
         }
 
-        #logo-ita-stivale {
-            height: 80px;
-            width: 80px;
-            border-radius: 50%;
-        }
-
-        .intestazione h1 {
-            margin: 0;
-            color: black;
-            font-size: 24px;
+        main {
+            min-height: 100vh;
+            background: linear-gradient(to right,rgb(176, 176, 176),white);
         }
 
         .content-container {
+            padding-top: 100px;
+            color: white;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 100px;
-            gap: 50px;
-            position: relative;
+            justify-content: space-around;
         }
 
-        .arrow {
-            font-size: 75px;
-            text-align: center;
-            margin: 0 10px;
-            color: red;
-            cursor: pointer;
-        }
-
-        .video-container {
-            flex: 1;
-            max-width: 50%;
-        }
-
-        iframe {
+        .content-container img {
+            width: 500px;
+            height: 450px;
             border-radius: 10px;
         }
 
         .description-container {
-            background: linear-gradient(to right, rgba(255, 0, 0, 0.415), rgba(255, 170, 0, 0.421));
-            border-radius: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            border: 3px solid;
-            border-color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            width: 800px;
+            background: linear-gradient(to right,  rgba(0, 0, 0, 0.9), rgba(249, 3, 3, 0.8), rgba(0, 0, 0, 0.7));
+            flex-direction: column;
+            padding:30px;
+            letter-spacing: 0.4px;
+            border-radius: 10px;
+            font-size: 18px;
         }
 
-
-        #back{ 
-            width: 30px;
-            height: 30px;
+        .description-container p{
+            margin-bottom: 0;
+            word-spacing: 5px;
         }
 
+        h2 {
+            margin: 7px 0px;
+            color: white;
+            font-size: 30px;
+            text-shadow: 2px 1px 5px black;
+        }
+
+        .title-iframe {
+            margin-top: 100px;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .navigation-arrow {
+            border-radius: 10px;
+            float: left;
+            margin-right: 20px;
+            z-index: 10;
+        }
+
+        .iframe-section p{
+            margin-right: 40px;
+            font-size: 25px;
+            color: white;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(13, 99, 247, 0.7), rgba(0, 0, 0, 0.7));
+        }
+
+        .arrow-button {
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: black;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="intestazione">
-            <img src="assets/back2.webp" alt="back" id="back">
-            <h1>ANTINCENDIO</h1>
-            <img id="logo-ita-stivale"
-                src="https://img.freepik.com/vettori-premium/estingue-il-fuoco-protezione-antincendio-rossa-dell-estintore-protezione-della-fiamma-illustrazione-di-vettore-di-concetto-di-lotta-contro-la-fiamma-processo-di-estinzione-del-fuoco_229548-2288.jpg"
-                alt="Logo">
-        </div>
+
+    <header class="header">
+        <h1>ANTINCENDIO</h1>
+        <img style="margin-left: 10px;" src="assets/estintore.webp" width="40px" alt="esculapio">
     </header>
+    
+    <main>
+        <div class="content-container">
+            <div class="arrow-button" id="previous-step">&#8592;</div>
 
-    <div class="content-container">
+            <img src="assets/IncendioFoto.jpg" alt="incendio">
 
-        <div class="arrow" id="return-button">&#8592;</div>
-
-        <div class="video-container">
-            <iframe id="video" width="560" height="315"
-                src="https://www.youtube.com/embed/Q4w851Xiy70?si=-WSQY9V5Hg7UtFLK" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="description-container">
+                <h2>Prevenzione Incendi</h2>
+                <p>
+                    La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e
+                    proteggere persone, edifici e l’ambiente. Ciò include:
+                    - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
+                    - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
+                    - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
+                    antincendio.
+                    - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme
+                    e estinzione.
+                </p>
+            </div>
+            
+            <div class="arrow-button" id="next-step">&#8594;</div>
         </div>
-
-        <div class="description-container" id="description">
-            <h2>Prevenzione Incendi</h2>
-            <p>
-                La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e
-                proteggere persone, edifici e l’ambiente. Ciò include:
-                - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
-                - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
-                - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
-                antincendio.
-                - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme
-                e estinzione.
-            </p>
-        </div>
-
-        <div class="arrow" id="next-button">&#8594;</div>
-
-    </div>
+    </main>
 
     <script>
-        const content = [
+        const headerTitle = document.querySelector("h2");
+        let mediaElement = document.querySelector(".content-container img");
+        const previousStepArrow = document.getElementById("previous-step");
+        const nextStepArrow = document.getElementById("next-step");
+        const descriptionContainer = document.querySelector(".description-container");
+        const originalDescriptionContent = descriptionContainer.innerHTML;
+
+        let currentStep = 0;
+
+        const steps = [
             {
-                video: "https://www.youtube.com/embed/Q4w851Xiy70?si=-WSQY9V5Hg7UtFLK",
-                title: "Prevenzione Incendi",
-                description: `La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e proteggere persone, edifici e l’ambiente. Ciò include:
-                - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
-                - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
-                - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi antincendio.
-                - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme e estinzione.`
-            },
-            {
-                video: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8",
+                media: {
+                    type: "iframe",
+                    src: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8"
+                },
                 title: "Sicurezza Antincendio",
-                description: `La sicurezza antincendio si concentra sulla protezione contro il rischio di incendio, attraverso impianti e tecnologie avanzate. Ecco cosa fare:
-                - Utilizzare dispositivi di sicurezza adeguati.
-                - Aggiornare regolarmente le attrezzature antincendio.
-                - Monitorare costantemente le condizioni di sicurezza degli ambienti.`
+                description:  `
+            <h2>Sicurezza Antincendio</h2>
+            <p>La sicurezza antincendio è fondamentale per proteggere persone, edifici e ambienti da potenziali danni causati da incendi.
+                 Essa comprende una serie di misure preventive, come l'installazione di impianti di rilevamento del fumo e di allarme, 
+                 l'utilizzo di estintori e sistemi di spegnimento automatico, come gli sprinkler, e la pianificazione di vie di fuga sicure.
+                  È fondamentale che le persone siano adeguatamente formate, con corsi che insegnano come comportarsi in caso di emergenza, 
+                  come utilizzare correttamente gli estintori e come evacuare in modo rapido e sicuro. Inoltre, la manutenzione regolare degli impianti antincendio è essenziale per garantire che siano sempre operativi. Le costruzioni moderne devono essere progettate utilizzando materiali resistenti al fuoco, e le normative locali spesso richiedono la presenza di sistemi antincendio ben studiati e collaudati. La sicurezza antincendio non riguarda solo le grandi strutture industriali, ma
+                 anche le abitazioni private, dove una gestione responsabile delle fonti di calore e l'adozione di precauzioni possono prevenire incidenti.</p>
+         
+        `
             },
             {
-                video: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9",
+                media: {
+                    type: "iframe",
+                    src: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9"
+                },
                 title: "Sistemi Antincendio",
-                description: `Le tecnologie moderne per la protezione antincendio includono:
-                - Sistemi di rilevamento automatico degli incendi.
-                - Sistemi di soppressione automatica delle fiamme.
-                - Monitoraggio remoto delle condizioni di sicurezza.`
+                description: 
+            `
+            <h2>Sistemi Antincendio</h2>
+            <p>I sistemi antincendio sono fondamentali per proteggere edifici e persone da incendi. 
+                Tra i più comuni, troviamo i sistemi di rilevamento incendio, che includono rilevatori
+                 di fumo, calore e gas, i quali attivano un allarme non appena viene individuato un 
+                 principio di incendio. I sistemi di estinzione automatica, come gli sprinkler e 
+                 gli estintori automatici, intervengono per spegnere le fiamme in modo rapido e autonomo.
+                  Inoltre, i sistemi di allarme informano le persone presenti, permettendo loro di
+                   evacuare in sicurezza. 
+                   I sistemi di controllo del fumo sono essenziali per garantire vie di fuga libere da fumo, 
+                   mentre i sistemi di soppressione specializzati, come quelli a schiuma o CO2, vengono utilizzati in 
+                   situazioni ad alto rischio, come incendi di materiale chimico o elettrico. La manutenzione e l'adeguamento di 
+                   questi sistemi sono essenziali per garantire che siano sempre operativi e in grado di intervenire tempestivamente 
+                   in caso di emergenza.</p>
+          
+        `
             }
         ];
 
-        let currentIndex = 0;
+        function updateStepContent() {
+            const step = steps[currentStep];
 
+            // Aggiorna titolo e descrizione
+            descriptionContainer.innerHTML = step.description;
 
-        function updateContent() {
-            const iframe = document.getElementById("video");
-            const title = document.querySelector("#description h2");
-            const paragraph = document.querySelector("#description p");
-
-            iframe.src = content[currentIndex].video;
-            title.textContent = content[currentIndex].title;
-            paragraph.textContent = content[currentIndex].description;
-        }
-
-        document.getElementById("next-button").addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % content.length;
-            updateContent();
-        });
-
-        updateContent();
-
-
-        document.getElementById("return-button").addEventListener("click", () => {
-            content.splice(currentIndex, 1);
-            currentIndex = (currentIndex === content.length) ? 0 : currentIndex;
-
-
-            // Se l'ultimo elemento è stato rimosso, torna al primo
-            if (currentIndex >= content.length) {
-                currentIndex = content.length - 1;
+            // Sostituzione immagine/video
+            let newMediaElement;
+            if (step.media.type === "img") {
+                newMediaElement = document.createElement("img");
+                newMediaElement.src = step.media.src;
+                newMediaElement.style.width = "500px";
+                newMediaElement.style.height = "450px";
+                newMediaElement.style.borderRadius = "10px";
+            } else if (step.media.type === "iframe") {
+                newMediaElement = document.createElement("iframe");
+                newMediaElement.style.marginTop = "40px";
+                newMediaElement.width = "500";
+                newMediaElement.height = "450";
+                newMediaElement.src = step.media.src;
+                newMediaElement.title = "YouTube video player";
+                newMediaElement.frameBorder = "0";
+                newMediaElement.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                newMediaElement.referrerPolicy = "strict-origin-when-cross-origin";
+                newMediaElement.allowFullscreen = true;
+                newMediaElement.style.borderRadius = "10px";
             }
 
+            mediaElement.replaceWith(newMediaElement);
+            mediaElement = newMediaElement;
+        }
 
-            updateContent();
+        nextStepArrow.addEventListener("click", () => {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                updateStepContent();
+            }
         });
 
-        updateContent();
-
-
-
-    const back = document.getElementById("back");
-    back.addEventListener("click", ()=>{
-        window.history.back();
-    })
-
+        previousStepArrow.addEventListener("click", () => {
+            if (currentStep > 0) {
+                currentStep--;
+                updateStepContent();
+            }
+        });
     </script>
 
 </body>
