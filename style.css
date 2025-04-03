@@ -9,7 +9,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  
+
 }
 
 h1 {
@@ -25,9 +25,11 @@ h1 {
   background: linear-gradient(to right, green, white, red);
   height: 100px;
 }
-.ListaLink:hover{
+
+.ListaLink:hover {
   cursor: pointer;
 }
+
 #hamburger img {
   width: 30px;
   background-color: white;
@@ -45,10 +47,10 @@ h1 {
   color: rgb(0, 0, 0);
   transition: left 0.3s ease;
   display: block;
-background-image: url(assets/ita-stivale.webp);
-background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
+  background-image: url(assets/ita-stivale.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 
 }
 
@@ -131,6 +133,7 @@ input {
   position: relative;
   width: 100%;
 }
+
 #intro {
   letter-spacing: 0.2px;
   border-style: ridge;
@@ -160,6 +163,7 @@ input {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20%;
+  margin-bottom: 5%;
 }
 
 .card {
@@ -213,7 +217,8 @@ input {
   font-size: 18px;
 
 }
-.testo-quiz{
+
+.testo-quiz {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,8 +228,10 @@ input {
 }
 
 footer {
-  background-color: #222; /* Sfondo scuro */
-  color: #fff; /* Testo bianco */
+  background-color: #222;
+  /* Sfondo scuro */
+  color: #fff;
+  /* Testo bianco */
   padding: 0px 20px;
   text-align: center;
 }
@@ -246,11 +253,13 @@ footer {
 .footer-section h4 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #f8b400; /* Giallo sicurezza */
+  color: #f8b400;
+  /* Giallo sicurezza */
   text-transform: uppercase;
 }
 
-.footer-section p, .footer-section ul {
+.footer-section p,
+.footer-section ul {
   font-size: 14px;
   line-height: 1.5;
 }
@@ -271,7 +280,8 @@ footer {
 }
 
 .footer-section ul li a:hover {
-  color: #f8b400; /* Cambia colore al passaggio del mouse */
+  color: #f8b400;
+  /* Cambia colore al passaggio del mouse */
 }
 
 /* Newsletter */
