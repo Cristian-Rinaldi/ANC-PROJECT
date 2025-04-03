@@ -159,11 +159,15 @@ input {
 
 .cardContainer {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 40px;
+  flex-wrap: nowrap;
   justify-content: space-between;
   margin-top: 20%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+  overflow: hidden;
+  padding: 5px;
 }
 
 .card {
@@ -178,7 +182,7 @@ input {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
@@ -199,6 +203,8 @@ input {
   color: black;
   font-weight: 500;
   font-size: larger;
+  max-height: fit-content; 
+  flex-grow: 1; 
 }
 
 #primoSoccorso {
@@ -253,8 +259,7 @@ footer {
 .footer-section h4 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #f8b400;
-  /* Giallo sicurezza */
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -280,8 +285,9 @@ footer {
 }
 
 .footer-section ul li a:hover {
-  color: #f8b400;
-  /* Cambia colore al passaggio del mouse */
+  background: linear-gradient(to right, green, white, red);
+  -webkit-background-clip: text; /* Applica il gradiente solo al testo */
+  color: transparent; /* Rende il testo trasparente per vedere il gradiente */
 }
 
 /* Newsletter */
@@ -294,8 +300,8 @@ footer {
 }
 
 .footer-section button {
-  background-color: #f8b400;
-  color: #222;
+  background-color: #ffffff;
+  color: #1c1c1c;
   border: none;
   padding: 10px 15px;
   margin-top: 10px;
@@ -305,7 +311,7 @@ footer {
 }
 
 .footer-section button:hover {
-  background-color: #ffcc00;
+ background: linear-gradient(to right, green, white, red);
 }
 
 /* Footer bottom */
@@ -316,7 +322,7 @@ footer {
 }
 
 .footer-bottom a {
-  color: #f8b400;
+  color: white;
   text-decoration: none;
 }
 

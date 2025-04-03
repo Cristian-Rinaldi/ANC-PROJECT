@@ -63,6 +63,6 @@ cardAntincendio.addEventListener("click", () => {
 });
 
 cardDifesa.addEventListener("click", () => {
-    window.open("sez-difesapersonale.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+    window.open("sez-difesa.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
 });
 
