@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,36 +77,53 @@
             border-color: rgb(0, 0, 0);
         }
 
+
+        #back{ 
+            width: 30px;
+            height: 30px;
+        }
+
     </style>
 </head>
+
 <body>
     <header>
         <div class="intestazione">
+            <img src="assets/back2.webp" alt="back" id="back">
             <h1>ANTINCENDIO</h1>
-            <img id="logo-ita-stivale" src="https://img.freepik.com/vettori-premium/estingue-il-fuoco-protezione-antincendio-rossa-dell-estintore-protezione-della-fiamma-illustrazione-di-vettore-di-concetto-di-lotta-contro-la-fiamma-processo-di-estinzione-del-fuoco_229548-2288.jpg" alt="Logo">
+            <img id="logo-ita-stivale"
+                src="https://img.freepik.com/vettori-premium/estingue-il-fuoco-protezione-antincendio-rossa-dell-estintore-protezione-della-fiamma-illustrazione-di-vettore-di-concetto-di-lotta-contro-la-fiamma-processo-di-estinzione-del-fuoco_229548-2288.jpg"
+                alt="Logo">
         </div>
     </header>
 
     <div class="content-container">
 
-    <div class="arrow" id="return-button">&#8592;</div>
+        <div class="arrow" id="return-button">&#8592;</div>
 
         <div class="video-container">
-            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Q4w851Xiy70?si=-WSQY9V5Hg7UtFLK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="video" width="560" height="315"
+                src="https://www.youtube.com/embed/Q4w851Xiy70?si=-WSQY9V5Hg7UtFLK" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        
+
         <div class="description-container" id="description">
             <h2>Prevenzione Incendi</h2>
             <p>
-                La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e proteggere persone, edifici e l’ambiente. Ciò include:
+                La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e
+                proteggere persone, edifici e l’ambiente. Ciò include:
                 - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
                 - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
-                - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi antincendio.
-                - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme e estinzione.
+                - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
+                antincendio.
+                - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme
+                e estinzione.
             </p>
         </div>
 
-          <div class="arrow" id="next-button">&#8594;</div>
+        <div class="arrow" id="next-button">&#8594;</div>
 
     </div>
 
@@ -121,7 +139,7 @@
                 - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme e estinzione.`
             },
             {
-                video: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8", 
+                video: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8",
                 title: "Sicurezza Antincendio",
                 description: `La sicurezza antincendio si concentra sulla protezione contro il rischio di incendio, attraverso impianti e tecnologie avanzate. Ecco cosa fare:
                 - Utilizzare dispositivi di sicurezza adeguati.
@@ -130,7 +148,7 @@
             },
             {
                 video: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9",
-                 title: "Sistemi Antincendio",
+                title: "Sistemi Antincendio",
                 description: `Le tecnologie moderne per la protezione antincendio includono:
                 - Sistemi di rilevamento automatico degli incendi.
                 - Sistemi di soppressione automatica delle fiamme.
@@ -140,7 +158,7 @@
 
         let currentIndex = 0;
 
-    
+
         function updateContent() {
             const iframe = document.getElementById("video");
             const title = document.querySelector("#description h2");
@@ -160,22 +178,30 @@
 
 
         document.getElementById("return-button").addEventListener("click", () => {
-            content.splice(currentIndex, 1); 
-            currentIndex = (currentIndex === content.length) ? 0 : currentIndex; 
+            content.splice(currentIndex, 1);
+            currentIndex = (currentIndex === content.length) ? 0 : currentIndex;
 
 
-               // Se l'ultimo elemento è stato rimosso, torna al primo
-               if (currentIndex >= content.length) {
-                    currentIndex = content.length - 1;
-                }
+            // Se l'ultimo elemento è stato rimosso, torna al primo
+            if (currentIndex >= content.length) {
+                currentIndex = content.length - 1;
+            }
 
-                
+
             updateContent();
         });
 
-        updateContent(); 
-   
+        updateContent();
+
+
+
+    const back = document.getElementById("back");
+    back.addEventListener("click", ()=>{
+        window.history.back();
+    })
+
     </script>
 
 </body>
+
 </html>
