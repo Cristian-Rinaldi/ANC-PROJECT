@@ -25,7 +25,9 @@ h1 {
   background: linear-gradient(to right, green, white, red);
   height: 100px;
 }
-
+.ListaLink:hover{
+  cursor: pointer;
+}
 #hamburger img {
   width: 30px;
   background-color: white;
@@ -43,6 +45,11 @@ h1 {
   color: rgb(0, 0, 0);
   transition: left 0.3s ease;
   display: block;
+background-image: url(assets/ita-stivale.webp);
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+
 }
 
 #menuHamburger.open {
@@ -192,12 +199,117 @@ input {
 
 #primoSoccorso {
   background: linear-gradient(to bottom, white, rgba(75, 26, 234, 0.735));
+  font-size: 18px;
 }
 
 #antincendio {
   background: linear-gradient(to bottom, white, rgba(214, 26, 26, 0.735));
+  font-size: 18px;
+
 }
 
 #difesaPersonale {
   background: linear-gradient(to bottom, white, gray);
+  font-size: 18px;
+
+}
+.testo-quiz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-weight: 800;
+
+}
+
+footer {
+  background-color: #222; /* Sfondo scuro */
+  color: #fff; /* Testo bianco */
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f8b400; /* Giallo sicurezza */
+  text-transform: uppercase;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+  color: #f8b400; /* Cambia colore al passaggio del mouse */
+}
+
+/* Newsletter */
+.footer-section input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.footer-section button {
+  background-color: #f8b400;
+  color: #222;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.footer-section button:hover {
+  background-color: #ffcc00;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: #f8b400;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
