@@ -22,7 +22,7 @@
             align-items: center;
             border-bottom: 2px solid black;
             text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.468);
-            letter-spacing:4px;
+            letter-spacing: 4px;
             word-spacing: 10px;
             font-size: 16px;
             color: white;
@@ -30,7 +30,7 @@
 
         main {
             min-height: 100vh;
-            background: linear-gradient(to right,rgb(176, 176, 176),white);
+            background: linear-gradient(to right, rgb(176, 176, 176), white);
         }
 
         .content-container {
@@ -50,15 +50,15 @@
             display: flex;
             align-items: center;
             width: 800px;
-            background: linear-gradient(to right,  rgba(0, 0, 0, 0.9), rgba(249, 3, 3, 0.8), rgba(0, 0, 0, 0.7));
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(249, 3, 3, 0.8), rgba(0, 0, 0, 0.7));
             flex-direction: column;
-            padding:30px;
+            padding: 30px;
             letter-spacing: 0.4px;
             border-radius: 10px;
             font-size: 18px;
         }
 
-        .description-container p{
+        .description-container p {
             margin-bottom: 0;
             word-spacing: 5px;
         }
@@ -82,7 +82,7 @@
             z-index: 10;
         }
 
-        .iframe-section p{
+        .iframe-section p {
             margin-right: 40px;
             font-size: 25px;
             color: white;
@@ -96,16 +96,31 @@
             cursor: pointer;
             color: black;
         }
+
+        #back-button {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 100px;
+        }
+
+        #back-position {
+            cursor: pointer;
+            position: absolute;
+            right: 90%;
+        }
+
     </style>
 </head>
 
 <body>
 
     <header class="header">
+        <div id="back-position"><img src="assets/back2.webp" alt="" id="back-button"></div>
         <h1>ANTINCENDIO</h1>
         <img style="margin-left: 10px;" src="assets/estintore.webp" width="40px" alt="esculapio">
     </header>
-    
+
     <main>
         <div class="content-container">
             <div class="arrow-button" id="previous-step">&#8592;</div>
@@ -121,16 +136,23 @@
                     - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
                     - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
                     antincendio.
-                    - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di allarme
+                    - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di
+                    allarme
                     e estinzione.
                 </p>
             </div>
-            
+
             <div class="arrow-button" id="next-step">&#8594;</div>
         </div>
     </main>
 
     <script>
+
+        // JavaScript per la freccia che porta indietro alla pagina home
+        document.getElementById("back-button").addEventListener("click", function () {
+            window.open('index.html', '_self'); // Apre la home page nella stessa finestra
+        });
+
         const headerTitle = document.querySelector("h2");
         let mediaElement = document.querySelector(".content-container img");
         const previousStepArrow = document.getElementById("previous-step");
@@ -147,7 +169,7 @@
                     src: "https://www.youtube.com/embed/8bcgT3XVDns?si=Ld_kLUFuGGxa6fG8"
                 },
                 title: "Sicurezza Antincendio",
-                description:  `
+                description: `
             <h2>Sicurezza Antincendio</h2>
             <p>La sicurezza antincendio è fondamentale per proteggere persone, edifici e ambienti da potenziali danni causati da incendi.
                  Essa comprende una serie di misure preventive, come l'installazione di impianti di rilevamento del fumo e di allarme, 
@@ -164,8 +186,8 @@
                     src: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9"
                 },
                 title: "Sistemi Antincendio",
-                description: 
-            `
+                description:
+                    `
             <h2>Sistemi Antincendio</h2>
             <p>I sistemi antincendio sono fondamentali per proteggere edifici e persone da incendi. 
                 Tra i più comuni, troviamo i sistemi di rilevamento incendio, che includono rilevatori

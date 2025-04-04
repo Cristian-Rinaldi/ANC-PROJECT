@@ -1,171 +1,191 @@
 <!DOCTYPE html>
- <html lang="en">
- 
- <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>PRIMO SOCCORSO</title>
-     <style>
-         html,
-         body {
-             height: 100%;
-             font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
-                 "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-             margin: 0;
-         }
- 
-         .header {
-             background: linear-gradient(to right,
-                     rgba(0, 0, 0, 0.9),
-                     rgba(87, 87, 87, 0.8),
-                     rgba(0, 0, 0, 0.7));
-             width: 100%;
-             height: 100px;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             border-bottom: 2px solid black;
-             text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.468);
-             letter-spacing: 4px;
-             word-spacing: 10px;
-             font-size: 16px;
-             color: white;
-         }
- 
-         main {
-             min-height: 100vh;
-             background: linear-gradient(to right, rgb(176, 176, 176), white);
-         }
- 
-         .primo-video {
-             padding-top: 100px;
-             color: white;
-             display: flex;
-             justify-content: space-around;
-         }
- 
-         .primo-video img {
-             width: 500px;
-             height: 450px;
-             border-radius: 10px;
-         }
- 
-         .descrizione {
-             display: flex;
-             align-items: center;
-             width: 800px;
-             background: linear-gradient(to right,
-                     rgba(0, 0, 0, 0.9),
-                     rgba(104, 104, 105, 0.8),
-                     rgba(0, 0, 0, 0.7));
-             flex-direction: column;
-             padding: 30px;
-             letter-spacing: 0.4px;
-             border-radius: 10px;
-             font-size: 18px;
-         }
- 
-         .descrizione p {
-             margin-bottom: 0;
-             word-spacing: 5px;
-         }
- 
-         h2 {
-             margin: 7px 0px;
-             color: white;
-             font-size: 30px;
- 
-             text-shadow: 2px 1px 5px black;
-         }
- 
-         .title-iframe {
-             margin-top: 100px;
-             text-shadow: 5px 5px 5px black;
-         }
- 
-         #blsd {
-             border-radius: 10px;
-             float: left;
-             margin-right: 20px;
-             z-index: 10;
-         }
- 
-         .sez-iframe p {
-             margin-right: 40px;
-             font-size: 25px;
-             color: white;
-             background: linear-gradient(to right,
-                     rgba(0, 0, 0, 0.7),
-                     rgba(13, 99, 247, 0.7),
-                     rgba(0, 0, 0, 0.7));
-         }
- 
-         #return-button {
-             font-size: 70px;
-             display: flex;
-             align-items: center;
-             cursor: pointer;
-             color: black;
-         }
- 
-         #next-button {
-             font-size: 70px;
-             display: flex;
-             align-items: center;
-             cursor: pointer;
-             color: black;
-         }
-     </style>
- </head>
- 
- <body>
-     <header class="header">
-         <h1>DIFESA PERSONALE</h1>
-         <img style="margin-left: 10px" src="assets/difesa.png" width="40px" alt="difesa" />
-     </header>
-     <main>
-         <div class="primo-video">
-             <div class="arrow" id="return-button">&#8592;</div>
- 
-             <img src="assets/tavola-difesa.jpg" alt="" />
- 
-             <div class="descrizione">
-                 <h2>WOMAN SELF-DEFENCE</h2>
-                 <p>
-                     La difesa personale è un'abilità fondamentale per chiunque, inclusa
-                     ogni donna, per sentirsi più sicura e preparata a difendersi in
-                     situazioni di pericolo. Le tecniche di autodifesa non solo possono
-                     salvare la vita, ma aumentano anche la fiducia in se stessi. Un buon
-                     modo per acquisire fiducia e imparare le tecniche in modo pratico è
-                     partecipare a corsi di autodifesa. Molti corsi sono progettati per
-                     donne e ti insegnano tecniche pratiche, oltre a strategie
-                     psicologiche per gestire situazioni pericolose. Saper difendersi è
-                     fondamentale, ma è altrettanto importante prevenire i pericoli e
-                     prepararsi mentalmente a gestire situazioni difficili.
-                     L'addestramento fisico e mentale, la consapevolezza, e la conoscenza
-                     delle tecniche di difesa personale possono fare la differenza in
-                     situazioni di emergenza.
-                 </p>
-             </div>
-             <div class="arrow" id="next-button">&#8594;</div>
-         </div>
-         <div style="height: 50px;"></div>
-     </main>
- 
-     <script>
-         const h2 = document.querySelector("h2");
-         let immagine = document.querySelector(".primo-video img");
-         const arrowReturn = document.getElementById("return-button");
-         const arrowNext = document.getElementById("next-button");
-         const descrizione = document.querySelector(".descrizione");
-         const descrizioneOriginale = descrizione.innerHTML;
- 
-         let currentStep = 0;
- 
-         const steps = [
-             {
-                 title: "WOMAN SELF-DEFENCE",
-                 content: `
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIMO SOCCORSO</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+                "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.9),
+                    rgba(87, 87, 87, 0.8),
+                    rgba(0, 0, 0, 0.7));
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid black;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.468);
+            letter-spacing: 4px;
+            word-spacing: 10px;
+            font-size: 16px;
+            color: white;
+        }
+
+        main {
+            min-height: 100vh;
+            background: linear-gradient(to right, rgb(176, 176, 176), white);
+        }
+
+        .primo-video {
+            padding-top: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .primo-video img {
+            width: 500px;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        .descrizione {
+            display: flex;
+            align-items: center;
+            width: 800px;
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.9),
+                    rgba(104, 104, 105, 0.8),
+                    rgba(0, 0, 0, 0.7));
+            flex-direction: column;
+            padding: 30px;
+            letter-spacing: 0.4px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .descrizione p {
+            margin-bottom: 0;
+            word-spacing: 5px;
+        }
+
+        h2 {
+            margin: 7px 0px;
+            color: white;
+            font-size: 30px;
+
+            text-shadow: 2px 1px 5px black;
+        }
+
+        .title-iframe {
+            margin-top: 100px;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        #blsd {
+            border-radius: 10px;
+            float: left;
+            margin-right: 20px;
+            z-index: 10;
+        }
+
+        .sez-iframe p {
+            margin-right: 40px;
+            font-size: 25px;
+            color: white;
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(13, 99, 247, 0.7),
+                    rgba(0, 0, 0, 0.7));
+        }
+
+        #return-button {
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: black;
+        }
+
+        #next-button {
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: black;
+        }
+
+        #back-button {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 100px;
+        }
+
+        #back-position {
+            cursor: pointer;
+            position: absolute;
+            right: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div id="back-position"><img src="assets/back2.webp" alt="" id="back-button"></div>
+        <h1>DIFESA PERSONALE</h1>
+        <img style="margin-left: 10px" src="assets/difesa.png" width="40px" alt="difesa" />
+    </header>
+    <main>
+        <div class="primo-video">
+            <div class="arrow" id="return-button">&#8592;</div>
+
+            <img src="assets/tavola-difesa.jpg" alt="" />
+
+            <div class="descrizione">
+                <h2>WOMAN SELF-DEFENCE</h2>
+                <p>
+                    La difesa personale è un'abilità fondamentale per chiunque, inclusa
+                    ogni donna, per sentirsi più sicura e preparata a difendersi in
+                    situazioni di pericolo. Le tecniche di autodifesa non solo possono
+                    salvare la vita, ma aumentano anche la fiducia in se stessi. Un buon
+                    modo per acquisire fiducia e imparare le tecniche in modo pratico è
+                    partecipare a corsi di autodifesa. Molti corsi sono progettati per
+                    donne e ti insegnano tecniche pratiche, oltre a strategie
+                    psicologiche per gestire situazioni pericolose. Saper difendersi è
+                    fondamentale, ma è altrettanto importante prevenire i pericoli e
+                    prepararsi mentalmente a gestire situazioni difficili.
+                    L'addestramento fisico e mentale, la consapevolezza, e la conoscenza
+                    delle tecniche di difesa personale possono fare la differenza in
+                    situazioni di emergenza.
+                </p>
+            </div>
+            <div class="arrow" id="next-button">&#8594;</div>
+        </div>
+        <div style="height: 50px;"></div>
+    </main>
+
+    <script>
+
+        // JavaScript per la freccia che porta indietro alla pagina home
+        document.getElementById("back-button").addEventListener("click", function () {
+            window.open('index.html', '_self'); // Apre la home page nella stessa finestra
+        });
+
+        const h2 = document.querySelector("h2");
+        let immagine = document.querySelector(".primo-video img");
+        const arrowReturn = document.getElementById("return-button");
+        const arrowNext = document.getElementById("next-button");
+        const descrizione = document.querySelector(".descrizione");
+        const descrizioneOriginale = descrizione.innerHTML;
+
+        let currentStep = 0;
+
+        const steps = [
+            {
+                title: "WOMAN SELF-DEFENCE",
+                content: `
              <h2>WOMAN SELF-DEFENCE</h2>
              <p>
              L'autodifesa per le donne è un aspetto cruciale per la loro sicurezza e autonomia, 
@@ -186,11 +206,11 @@
              a un cambiamento culturale più ampio verso una maggiore parità e consapevolezza riguardo alla 
              sicurezza delle donne nella società.
              </p>`,
-                 media: { type: "img", src: "assets/tavola-difesa.jpg" },
-             },
-             {
-                 title: "AUTODIFESA DEI BAMBINI<",
-                 content: `
+                media: { type: "img", src: "assets/tavola-difesa.jpg" },
+            },
+            {
+                title: "AUTODIFESA DEI BAMBINI<",
+                content: `
              <h2>AUTODIFESA DEI BAMBINI</h2>
              <p>
                 L'autodifesa per i bambini a scuola è un aspetto fondamentale per garantire la loro sicurezza e 
@@ -207,14 +227,14 @@
                 è un passo cruciale per formare adulti consapevoli e responsabili, in grado di affrontare le 
                 sfide della vita con maggiore resilienza.
                 </p>`,
-                 media: {
-                     type: "iframe",
-                     src: "https://www.youtube.com/embed/dAuBgAlzKNw?si=5EjkyYfdu7C1JS2f",
-                 },
-             },
-             {
-                 title: "I LIMITI DELL'AUTODIFESA",
-                 content: `
+                media: {
+                    type: "iframe",
+                    src: "https://www.youtube.com/embed/dAuBgAlzKNw?si=5EjkyYfdu7C1JS2f",
+                },
+            },
+            {
+                title: "I LIMITI DELL'AUTODIFESA",
+                content: `
              <h2>I LIMITI DELL'AUTODIFESA</h2>
              <p>L'autodifesa è un diritto fondamentale che consente a una persona di proteggersi da aggressioni o minacce, ma deve essere esercitato con attenzione ai limiti legali. In generale, la legittima difesa è consentita solo se la risposta alla minaccia è proporzionata al pericolo. Questo significa che la reazione non deve essere superiore a quanto strettamente necessario per fermare l'aggressione. Se, per esempio, un'aggressione è fisica ma non grave, la risposta non può essere violenta o letale, come usare un'arma o colpire con eccessiva forza. La difesa deve sempre rispondere in modo adeguato alla gravità della situazione.
                  La legge stabilisce dei confini chiari per evitare che l'autodifesa venga abusata. Se una persona 
@@ -235,59 +255,59 @@
                  L'uso di armi deve sempre essere un atto giustificato dalla situazione e deve essere proporzionato
                  alla minaccia in corso.
                  </p>`,
-                 media: {
-                     type: "iframe",
-                     src: "https://www.youtube.com/embed/y7h-SdaVagc?si=kPenxDabcwa4Xpuq",
-                 },
-             },
-         ];
- 
-         function updateContent() {
-             const step = steps[currentStep];
- 
-             // Aggiorna titolo e descrizione
-             descrizione.innerHTML = step.content;
- 
-             // Sostituzione immagine/video
-             let newMedia;
-             if (step.media.type === "img") {
-                 newMedia = document.createElement("img");
-                 newMedia.src = step.media.src;
-                 newMedia.style.width = "500px";
-                 newMedia.style.height = "450px";
-                 newMedia.style.borderRadius = "10px";
-             } else if (step.media.type === "iframe") {
-                 newMedia = document.createElement("iframe");
-                 newMedia.style.marginTop = "40px";
-                 newMedia.width = "500";
-                 newMedia.height = "450";
-                 newMedia.height = "500";
-                 newMedia.src = step.media.src;
-                 newMedia.title = "YouTube video player";
-                 newMedia.frameBorder = "0";
-                 newMedia.allow =
-                     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-                 newMedia.referrerPolicy = "strict-origin-when-cross-origin";
-                 newMedia.allowFullscreen = true;
-                 newMedia.style.borderRadius = "10px";
-             }
- 
-             immagine.replaceWith(newMedia);
-             immagine = newMedia;
-         }
- 
-         arrowNext.addEventListener("click", () => {
-             if (currentStep < steps.length - 1) {
-                 currentStep++;
-                 updateContent();
-             }
-         });
- 
-         arrowReturn.addEventListener("click", () => {
-             if (currentStep > 0) {
-                 currentStep--;
-                 updateContent();
-             }
-         });
-     </script>
- </body>
+                media: {
+                    type: "iframe",
+                    src: "https://www.youtube.com/embed/y7h-SdaVagc?si=kPenxDabcwa4Xpuq",
+                },
+            },
+        ];
+
+        function updateContent() {
+            const step = steps[currentStep];
+
+            // Aggiorna titolo e descrizione
+            descrizione.innerHTML = step.content;
+
+            // Sostituzione immagine/video
+            let newMedia;
+            if (step.media.type === "img") {
+                newMedia = document.createElement("img");
+                newMedia.src = step.media.src;
+                newMedia.style.width = "500px";
+                newMedia.style.height = "450px";
+                newMedia.style.borderRadius = "10px";
+            } else if (step.media.type === "iframe") {
+                newMedia = document.createElement("iframe");
+                newMedia.style.marginTop = "40px";
+                newMedia.width = "500";
+                newMedia.height = "450";
+                newMedia.height = "500";
+                newMedia.src = step.media.src;
+                newMedia.title = "YouTube video player";
+                newMedia.frameBorder = "0";
+                newMedia.allow =
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                newMedia.referrerPolicy = "strict-origin-when-cross-origin";
+                newMedia.allowFullscreen = true;
+                newMedia.style.borderRadius = "10px";
+            }
+
+            immagine.replaceWith(newMedia);
+            immagine = newMedia;
+        }
+
+        arrowNext.addEventListener("click", () => {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                updateContent();
+            }
+        });
+
+        arrowReturn.addEventListener("click", () => {
+            if (currentStep > 0) {
+                currentStep--;
+                updateContent();
+            }
+        });
+    </script>
+</body>
