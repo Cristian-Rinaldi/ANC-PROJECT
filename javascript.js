@@ -68,6 +68,12 @@ cardDifesa.addEventListener("click", () => {
 
 // SALVA DATI UTENTE IN LOCALE
 
+
+const datiUtenteDiv = document.getElementById("datiUtente");
+const formDiv = document.querySelector("form");
+const btnEsci = document.getElementById("btnEsci");
+
+
 function salvaDati(event) {
   event.preventDefault(); 
 
@@ -81,5 +87,52 @@ function salvaDati(event) {
   localStorage.setItem("cognome", cognome);
   localStorage.setItem("dataNascita", dataNascita);
   localStorage.setItem("email", email);
-  
+  mostraDatiUtente(nome, cognome, dataNascita, email);
+  const utente2 = document.getElementById("utente2");
+  utente2.innerText = `${nome} ${cognome}`;
+  formDiv.reset();
 }
+function mostraDatiUtente(nome, cognome, dataNascita, email) {
+  // Nascondi il form di registrazione
+  formDiv.style.display = "none";
+  
+  // Mostra la sezione con i dati utente
+  datiUtenteDiv.style.display = "block";
+  
+  // Inserisci i dati nel menu
+  const utenteSpan = document.getElementById("utente");
+  const infoUtente = document.getElementById("infoUtente");
+
+  utenteSpan.innerText = `${nome} ${cognome}`;
+  infoUtente.innerHTML = `
+    <strong>Data di Nascita:</strong> ${dataNascita} <br>
+    <strong>E-mail:</strong> ${email}
+  `;
+}
+
+// Gestione del pulsante "Esci"
+btnEsci.addEventListener("click", () => {
+  // Rimuovi i dati dal localStorage
+  localStorage.removeItem("nome");
+  localStorage.removeItem("cognome");
+  localStorage.removeItem("dataNascita");
+  localStorage.removeItem("email");
+
+  // Nascondi i dati utente e mostra il form di registrazione
+  datiUtenteDiv.style.display = "none";
+  formDiv.style.display = "block";
+
+  // Reimposta la visualizzazione del nome nell'intro
+  const utenteSpan = document.getElementById("utente");
+  utenteSpan.innerText = "";
+  const utente2 = document.getElementById("utente2");
+  utente2.innerText = "";  // Rimuove il nome nel messaggio di benvenuto
+});
+
+
+const utente2=document.getElementById("utente2")
+  const nomeUtente= localStorage.getItem("nome");
+  const cognomeUtente=localStorage.getItem("cognome");
+  if(nomeUtente&&cognomeUtente){
+    utente2.innerText=`${nomeUtente} ${cognomeUtente}`
+  }

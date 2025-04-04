@@ -17,15 +17,8 @@ h1 {
   letter-spacing: 4px;
 }
 #container-utente{
-  z-index: 2;
+  z-index: 2;}
 
-
-  
-}
-h4{
-  margin: 0;
-
-}
 .ListaLink {
   display: flex;
   justify-content: space-between;
@@ -34,7 +27,54 @@ h4{
   background: linear-gradient(to right, green, white, red);
   height: 100px;
 }
+#datiUtente {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: transparent ;
+  box-sizing: border-box;
+}
 
+#datiUtente h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  margin-left: 60px;
+}
+
+#datiUtente p {
+  font-size: 1rem;
+  color: #555;
+  position: absolute;
+  top: 545px;
+  left: 120px;
+  text-align: center;
+}
+
+#datiUtente button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 400px;
+  border-radius: 5px;
+}
+
+#datiUtente button:hover {
+  background-color: #e53935;
+}
+
+#datiUtente #utente {
+  font-weight: bold;
+  color: #4CAF50;
+}
 .ListaLink:hover {
   cursor: pointer;
 }
@@ -62,6 +102,7 @@ h4{
   background-repeat: no-repeat;
 
 }
+
 
 #menuHamburger.open {
   left: 0;
@@ -99,7 +140,7 @@ input {
 
 #btn {
   margin-top: 40px;
-  margin-left: 50px;
+  margin-left: 25px;
   padding: 10px;
   color: rgb(0, 0, 0);
   font-size: medium;
@@ -132,7 +173,9 @@ input {
   color: transparent;
   transform: scale(1.1);
 }
-
+#logo{
+  position: relative;
+}
 #logo img {
   height: 50px;
   box-shadow: 5px 6px 5px;
