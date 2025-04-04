@@ -55,15 +55,15 @@ const cardAntincendio = document.getElementById("antincendio");
 const cardDifesa = document.getElementById("difesaPersonale");
 
 cardSanitaria.addEventListener("click", () => {
-    window.open("sez-sanitaria.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+    window.location.href = "sez-sanitaria.html"; // Naviga nella stessa finestra
 });
 
 cardAntincendio.addEventListener("click", () => {
-    window.open("sez-antincendio.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+    window.location.href = "sez-antincendio.html"; // Naviga nella stessa finestra
 });
 
 cardDifesa.addEventListener("click", () => {
-    window.open("sez-difesa.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+    window.location.href = "sez-difesa.html"; // Naviga nella stessa finestra
 });
 
 
