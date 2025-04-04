@@ -92,14 +92,14 @@ function salvaDati(event) {
   utente2.innerText = `${nome} ${cognome}`;
   formDiv.reset();
 }
+
+// MOSTRA I DATI UTENTE NEL MENU
+
 function mostraDatiUtente(nome, cognome, dataNascita, email) {
-  // Nascondi il form di registrazione
+
   formDiv.style.display = "none";
-  
-  // Mostra la sezione con i dati utente
   datiUtenteDiv.style.display = "block";
-  
-  // Inserisci i dati nel menu
+
   const utenteSpan = document.getElementById("utente");
   const infoUtente = document.getElementById("infoUtente");
 
@@ -110,19 +110,19 @@ function mostraDatiUtente(nome, cognome, dataNascita, email) {
   `;
 }
 
-// Gestione del pulsante "Esci"
+// ESCI DAL FORM DI REGISTRAZIONE
+
+
 btnEsci.addEventListener("click", () => {
-  // Rimuovi i dati dal localStorage
+  
   localStorage.removeItem("nome");
   localStorage.removeItem("cognome");
   localStorage.removeItem("dataNascita");
   localStorage.removeItem("email");
 
-  // Nascondi i dati utente e mostra il form di registrazione
+
   datiUtenteDiv.style.display = "none";
   formDiv.style.display = "block";
-
-  // Reimposta la visualizzazione del nome nell'intro
   const utenteSpan = document.getElementById("utente");
   utenteSpan.innerText = "";
   const utente2 = document.getElementById("utente2");
