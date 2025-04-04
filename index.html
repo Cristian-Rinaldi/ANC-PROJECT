@@ -31,23 +31,22 @@
     <div id="menuHamburger">
 
         <img src="assets/closer.jpg" alt="" id="close">
-        <form>
+        <form onsubmit="salvaDati(event)">
             <h3>SCOPRI IL TUO SOGNO!</h3>
             <label for="firstName">NOME</label>
-            <input type="text" placeholder="Digita un testo" required maxlength="25" minlength="5">
+            <input id="nome" type="text" placeholder="Digita un testo" required maxlength="30" minlength="2">
             <br>
             <label for="firstName">COGNOME</label>
-            <input type="text" placeholder="Digita un testo" required maxlength="25" minlength="5">
+            <input id="cognome" type="text" placeholder="Digita un testo" required maxlength="30" minlength="2">
             <br>
-            <label for="date" id="dataNascita">DATA DI NASCITA</label>
-            <input type="date" required id="birthDate">
+            <label for="date" >DATA DI NASCITA</label>
+            <input type="date" required id="dataNascita" >
             <br>
             <label for="email">E-MAIL</label>
-            <input type="email" placeholder="Digita un e-mail valida" required>
+            <input id="email" type="email" placeholder="Digita un e-mail valida" required>
             <br>
-            <button type="submit" id="btn">AVANTI</button>
+            <button type="submit" id="btn">REGISTRATI</button>
         </form>
-
     </div>
 
     <div class="introDiv">
