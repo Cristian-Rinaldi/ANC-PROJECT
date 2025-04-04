@@ -251,6 +251,8 @@
 
             mediaElement.replaceWith(newMediaElement);
             mediaElement = newMediaElement;
+            arrowNext.style.visibility = currentStep === steps.length - 1 ? "hidden" : "visible";
+arrowReturn.style.visibility = currentStep === 0 ? "hidden" : "visible";
         }
 
         // SCORRIMENTO SLIDE
@@ -268,6 +270,7 @@
                 updateStepContent();
             }
         });
+        updateStepContent();
 
     </script>
 

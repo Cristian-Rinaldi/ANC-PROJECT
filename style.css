@@ -75,15 +75,13 @@ h1 {
   font-weight: bold;
   color: #4CAF50;
 }
-.ListaLink:hover {
-  cursor: pointer;
-}
 
 #hamburger img {
   width: 30px;
   background-color: white;
   padding: 5px;
   box-shadow: 5px 6px 5px;
+  cursor: pointer;
 }
 
 #menuHamburger {

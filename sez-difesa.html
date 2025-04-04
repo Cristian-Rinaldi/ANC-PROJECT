@@ -294,6 +294,8 @@
 
             immagine.replaceWith(newMedia);
             immagine = newMedia;
+            arrowNext.style.visibility = currentStep === steps.length - 1 ? "hidden" : "visible";
+arrowReturn.style.visibility = currentStep === 0 ? "hidden" : "visible";
         }
 
         // SCORRIMENTO SLIDE
@@ -311,5 +313,6 @@
                 updateContent();
             }
         });
+        updateContent();
     </script>
 </body>
