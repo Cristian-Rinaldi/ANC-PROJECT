@@ -203,8 +203,8 @@ input {
   color: black;
   font-weight: 500;
   font-size: larger;
-  max-height: fit-content; 
-  flex-grow: 1; 
+  max-height: fit-content;
+  flex-grow: 1;
 }
 
 #primoSoccorso {
@@ -286,8 +286,10 @@ footer {
 
 .footer-section ul li a:hover {
   background: linear-gradient(to right, green, white, red);
-  -webkit-background-clip: text; /* Applica il gradiente solo al testo */
-  color: transparent; /* Rende il testo trasparente per vedere il gradiente */
+  -webkit-background-clip: text;
+  /* Applica il gradiente solo al testo */
+  color: transparent;
+  /* Rende il testo trasparente per vedere il gradiente */
 }
 
 /* Newsletter */
@@ -311,7 +313,7 @@ footer {
 }
 
 .footer-section button:hover {
- background: linear-gradient(to right, green, white, red);
+  background: linear-gradient(to right, green, white, red);
 }
 
 /* Footer bottom */

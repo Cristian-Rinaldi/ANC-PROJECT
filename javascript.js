@@ -43,7 +43,7 @@ hamburger.addEventListener("click", () => {
 
 closer.addEventListener("click", () => {
   menuHamburger.style.left = "-450px";
-  card.addEventListener("mouseover", () => {});
+  card.addEventListener("mouseover", () => { });
 });
 
 
@@ -55,14 +55,14 @@ const cardAntincendio = document.getElementById("antincendio");
 const cardDifesa = document.getElementById("difesaPersonale");
 
 cardSanitaria.addEventListener("click", () => {
-    window.open("sez-sanitaria.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-sanitaria.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
 });
 
 cardAntincendio.addEventListener("click", () => {
-    window.open("sez-antincendio.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-antincendio.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
 });
 
 cardDifesa.addEventListener("click", () => {
-    window.open("sez-difesa.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-difesa.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
 });
 

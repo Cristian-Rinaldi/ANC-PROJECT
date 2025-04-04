@@ -109,7 +109,6 @@
             position: absolute;
             right: 95%;
         }
-
     </style>
 </head>
 
@@ -155,14 +154,30 @@
 
         const headerTitle = document.querySelector("h2");
         let mediaElement = document.querySelector(".content-container img");
-        const previousStepArrow = document.getElementById("previous-step");
-        const nextStepArrow = document.getElementById("next-step");
+        const arrowReturn = document.getElementById("previous-step");
+        const  arrowNext = document.getElementById("next-step");
         const descriptionContainer = document.querySelector(".description-container");
         const originalDescriptionContent = descriptionContainer.innerHTML;
 
         let currentStep = 0;
 
         const steps = [
+        {
+                title: "CHE COS'È IL BLS-D?",
+                description: `
+            <h2>Prevenzione Incendi</h2>
+            <p>
+            La prevenzione antincendio comprende tutte le misure adottate per ridurre il rischio di incendi e
+            proteggere persone, edifici e l’ambiente. Ciò include:
+            - Identificazione dei rischi: come impianti elettrici non sicuri o materiali infiammabili.
+            - Formazione: educare le persone su come prevenire incendi e come agire in caso di emergenza.
+            - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
+            antincendio.
+            - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di
+            allarme e estinzione.
+            </p>`,
+                media: { type: "img", src: "assets/IncendioFoto.jpg" }
+            },
             {
                 media: {
                     type: "iframe",
@@ -177,7 +192,6 @@
                   È fondamentale che le persone siano adeguatamente formate, con corsi che insegnano come comportarsi in caso di emergenza, 
                   come utilizzare correttamente gli estintori e come evacuare in modo rapido e sicuro. Inoltre, la manutenzione regolare degli impianti antincendio è essenziale per garantire che siano sempre operativi. Le costruzioni moderne devono essere progettate utilizzando materiali resistenti al fuoco, e le normative locali spesso richiedono la presenza di sistemi antincendio ben studiati e collaudati. La sicurezza antincendio non riguarda solo le grandi strutture industriali, ma
                  anche le abitazioni private, dove una gestione responsabile delle fonti di calore e l'adozione di precauzioni possono prevenire incidenti.</p>
-         
         `
             },
             {
@@ -203,7 +217,8 @@
                    in caso di emergenza.</p>
           
         `
-            }
+            },
+            
         ];
 
         function updateStepContent() {
@@ -238,19 +253,20 @@
             mediaElement = newMediaElement;
         }
 
-        nextStepArrow.addEventListener("click", () => {
+        arrowNext.addEventListener("click", () => {
             if (currentStep < steps.length - 1) {
                 currentStep++;
                 updateStepContent();
             }
         });
 
-        previousStepArrow.addEventListener("click", () => {
+        arrowReturn.addEventListener("click", () => {
             if (currentStep > 0) {
                 currentStep--;
                 updateStepContent();
             }
         });
+
     </script>
 
 </body>
