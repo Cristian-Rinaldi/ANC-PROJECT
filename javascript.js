@@ -66,3 +66,25 @@ cardDifesa.addEventListener("click", () => {
   window.open("sez-difesa.html", "_blank"); 
 });
 
+
+
+function salvaDati(event) {
+  event.preventDefault(); 
+
+  const nome = document.getElementById("nome").value;
+  const cognome = document.getElementById("cognome").value;
+  const dataNascita = document.getElementById("dataNascita").value;
+  const email = document.getElementById("email").value;
+
+
+  localStorage.setItem("nome", nome);
+  localStorage.setItem("cognome", cognome);
+  localStorage.setItem("dataNascita", dataNascita);
+  localStorage.setItem("email", email);
+
+  const name = document.getElementById("name");
+  const lastname = document.getElementById("lastname");
+  
+  name.innerText = nome;
+  lastname.innerText = cognome;
+}
