@@ -147,10 +147,7 @@
 
     <script>
 
-        // JavaScript per la freccia che porta indietro alla pagina home
-        document.getElementById("back-button").addEventListener("click", function () {
-            window.open('index.html', '_self'); // Apre la home page nella stessa finestra
-        });
+        // DICHIRAZIONE VARIABILI
 
         const headerTitle = document.querySelector("h2");
         let mediaElement = document.querySelector(".content-container img");
@@ -158,6 +155,14 @@
         const  arrowNext = document.getElementById("next-step");
         const descriptionContainer = document.querySelector(".description-container");
         const originalDescriptionContent = descriptionContainer.innerHTML;
+
+        // FRECCIA CHE RIPORTA ALLA HOME
+
+        document.getElementById("back-button").addEventListener("click", function () {
+            window.open('index.html', '_self'); 
+        });
+
+        // CREAZIONE SLIDE
 
         let currentStep = 0;
 
@@ -174,8 +179,7 @@
             - Manutenzione: controllare regolarmente impianti elettrici, sistemi di riscaldamento e dispositivi
             antincendio.
             - Strutture sicure: costruire edifici con materiali resistenti al fuoco e installare sistemi di
-            allarme e estinzione.
-            </p>`,
+            allarme e estinzione.</p>`,
                 media: { type: "img", src: "assets/IncendioFoto.jpg" }
             },
             {
@@ -186,13 +190,13 @@
                 title: "Sicurezza Antincendio",
                 description: `
             <h2>Sicurezza Antincendio</h2>
-            <p>La sicurezza antincendio è fondamentale per proteggere persone, edifici e ambienti da potenziali danni causati da incendi.
-                 Essa comprende una serie di misure preventive, come l'installazione di impianti di rilevamento del fumo e di allarme, 
-                 l'utilizzo di estintori e sistemi di spegnimento automatico, come gli sprinkler, e la pianificazione di vie di fuga sicure.
-                  È fondamentale che le persone siano adeguatamente formate, con corsi che insegnano come comportarsi in caso di emergenza, 
-                  come utilizzare correttamente gli estintori e come evacuare in modo rapido e sicuro. Inoltre, la manutenzione regolare degli impianti antincendio è essenziale per garantire che siano sempre operativi. Le costruzioni moderne devono essere progettate utilizzando materiali resistenti al fuoco, e le normative locali spesso richiedono la presenza di sistemi antincendio ben studiati e collaudati. La sicurezza antincendio non riguarda solo le grandi strutture industriali, ma
-                 anche le abitazioni private, dove una gestione responsabile delle fonti di calore e l'adozione di precauzioni possono prevenire incidenti.</p>
-        `
+            <p>
+            La sicurezza antincendio è fondamentale per proteggere persone, edifici e ambienti da potenziali danni causati da incendi.
+            Essa comprende una serie di misure preventive, come l'installazione di impianti di rilevamento del fumo e di allarme, 
+            l'utilizzo di estintori e sistemi di spegnimento automatico, come gli sprinkler, e la pianificazione di vie di fuga sicure.
+            È fondamentale che le persone siano adeguatamente formate, con corsi che insegnano come comportarsi in caso di emergenza, 
+            come utilizzare correttamente gli estintori e come evacuare in modo rapido e sicuro. Inoltre, la manutenzione regolare degli impianti antincendio è essenziale per garantire che siano sempre operativi. Le costruzioni moderne devono essere progettate utilizzando materiali resistenti al fuoco, e le normative locali spesso richiedono la presenza di sistemi antincendio ben studiati e collaudati. La sicurezza antincendio non riguarda solo le grandi strutture industriali, ma
+            anche le abitazioni private, dove una gestione responsabile delle fonti di calore e l'adozione di precauzioni possono prevenire incidenti.</p> `
             },
             {
                 media: {
@@ -200,35 +204,30 @@
                     src: "https://www.youtube.com/embed/uAW26JGlJgA?si=4rebibYgh47Hsfj9"
                 },
                 title: "Sistemi Antincendio",
-                description:
-                    `
+                description:`
             <h2>Sistemi Antincendio</h2>
-            <p>I sistemi antincendio sono fondamentali per proteggere edifici e persone da incendi. 
-                Tra i più comuni, troviamo i sistemi di rilevamento incendio, che includono rilevatori
-                 di fumo, calore e gas, i quali attivano un allarme non appena viene individuato un 
-                 principio di incendio. I sistemi di estinzione automatica, come gli sprinkler e 
-                 gli estintori automatici, intervengono per spegnere le fiamme in modo rapido e autonomo.
-                  Inoltre, i sistemi di allarme informano le persone presenti, permettendo loro di
-                   evacuare in sicurezza. 
-                   I sistemi di controllo del fumo sono essenziali per garantire vie di fuga libere da fumo, 
-                   mentre i sistemi di soppressione specializzati, come quelli a schiuma o CO2, vengono utilizzati in 
-                   situazioni ad alto rischio, come incendi di materiale chimico o elettrico. La manutenzione e l'adeguamento di 
-                   questi sistemi sono essenziali per garantire che siano sempre operativi e in grado di intervenire tempestivamente 
-                   in caso di emergenza.</p>
-          
-        `
+            <p>
+            I sistemi antincendio sono fondamentali per proteggere edifici e persone da incendi. 
+            Tra i più comuni, troviamo i sistemi di rilevamento incendio, che includono rilevatori
+            di fumo, calore e gas, i quali attivano un allarme non appena viene individuato un 
+            principio di incendio. I sistemi di estinzione automatica, come gli sprinkler e 
+            gli estintori automatici, intervengono per spegnere le fiamme in modo rapido e autonomo.
+            Inoltre, i sistemi di allarme informano le persone presenti, permettendo loro di
+            evacuare in sicurezza. 
+            I sistemi di controllo del fumo sono essenziali per garantire vie di fuga libere da fumo, 
+            mentre i sistemi di soppressione specializzati, come quelli a schiuma o CO2, vengono utilizzati in 
+            situazioni ad alto rischio, come incendi di materiale chimico o elettrico. La manutenzione e l'adeguamento di 
+            questi sistemi sono essenziali per garantire che siano sempre operativi e in grado di intervenire tempestivamente 
+            in caso di emergenza.</p>`
             },
             
         ];
 
         function updateStepContent() {
             const step = steps[currentStep];
-
-            // Aggiorna titolo e descrizione
             descriptionContainer.innerHTML = step.description;
-
-            // Sostituzione immagine/video
             let newMediaElement;
+
             if (step.media.type === "img") {
                 newMediaElement = document.createElement("img");
                 newMediaElement.src = step.media.src;
@@ -252,6 +251,8 @@
             mediaElement.replaceWith(newMediaElement);
             mediaElement = newMediaElement;
         }
+
+        // SCORRIMENTO SLIDE
 
         arrowNext.addEventListener("click", () => {
             if (currentStep < steps.length - 1) {

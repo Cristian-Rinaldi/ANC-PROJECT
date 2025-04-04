@@ -24,9 +24,9 @@ const idInterval = setInterval(() => {
   index = (index + 1) % arrayImgScorrevoli.length;
 }, 3000);
 
-// MENU HAMBURGER
 
-//Apri Menu
+
+// APRI MENU HAMBURGER
 
 const hamburger = document.getElementById("hamburger");
 const menuHamburger = document.getElementById("menuHamburger");
@@ -39,7 +39,7 @@ hamburger.addEventListener("click", () => {
   menuHamburger.style.zIndex = "10";
 });
 
-// Chiud Menu
+// CHIUDI MENU HAMBURGER
 
 closer.addEventListener("click", () => {
   menuHamburger.style.left = "-450px";
@@ -47,7 +47,7 @@ closer.addEventListener("click", () => {
 });
 
 
-
+// APRE PAGINA IN UNA NUOVA SCHEDA
 
 const contenitoreCard = document.getElementsByClassName("cardContainer");
 const cardSanitaria = document.getElementById("primoSoccorso");
@@ -55,14 +55,14 @@ const cardAntincendio = document.getElementById("antincendio");
 const cardDifesa = document.getElementById("difesaPersonale");
 
 cardSanitaria.addEventListener("click", () => {
-  window.open("sez-sanitaria.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-sanitaria.html", "_blank"); 
 });
 
 cardAntincendio.addEventListener("click", () => {
-  window.open("sez-antincendio.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-antincendio.html", "_blank"); 
 });
 
 cardDifesa.addEventListener("click", () => {
-  window.open("sez-difesa.html", "_blank"); // Apre la pagina in una nuova finestra/scheda
+  window.open("sez-difesa.html", "_blank"); 
 });
 

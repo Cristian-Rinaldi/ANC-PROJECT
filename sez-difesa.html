@@ -168,17 +168,22 @@
 
     <script>
 
-        // JavaScript per la freccia che porta indietro alla pagina home
-        document.getElementById("back-button").addEventListener("click", function () {
-            window.open('index.html', '_self'); // Apre la home page nella stessa finestra
-        });
-
+        // DICHIARAZIONE VARIABILI
+        
         const h2 = document.querySelector("h2");
         let immagine = document.querySelector(".primo-video img");
         const arrowReturn = document.getElementById("return-button");
         const arrowNext = document.getElementById("next-button");
         const descrizione = document.querySelector(".descrizione");
         const descrizioneOriginale = descrizione.innerHTML;
+
+        // FRECCIA CHE RIPORTA ALLA HOME
+
+        document.getElementById("back-button").addEventListener("click", function () {
+            window.open('index.html', '_self'); // Apre la home page nella stessa finestra
+        });
+
+        // CREAZIONE SLIDE
 
         let currentStep = 0;
 
@@ -204,8 +209,7 @@
              a difenderli, rafforzando il loro diritto alla sicurezza e al rispetto. In sintesi, l'autodifesa
              per le donne è un potente strumento che non solo insegna a proteggersi, ma contribuisce anche 
              a un cambiamento culturale più ampio verso una maggiore parità e consapevolezza riguardo alla 
-             sicurezza delle donne nella società.
-             </p>`,
+             sicurezza delle donne nella società.</p>`,
                 media: { type: "img", src: "assets/tavola-difesa.jpg" },
             },
             {
@@ -213,20 +217,19 @@
                 content: `
              <h2>AUTODIFESA DEI BAMBINI</h2>
              <p>
-                L'autodifesa per i bambini a scuola è un aspetto fondamentale per garantire la loro sicurezza e 
-                benessere. Le scuole sono ambienti in cui i bambini interagiscono quotidianamente con i compagni 
-                e gli adulti, e in cui possono trovarsi esposti a situazioni di bullismo o comportamenti aggressivi.
-                Insegnare loro le basi dell'autodifesa non significa solo trasmettere tecniche fisiche, ma anche 
-                sviluppare abilità di consapevolezza situazionale e gestione delle emozioni. 
-                Attraverso l'autodifesa, i bambini imparano a riconoscere i segnali di pericolo, a dire “no” quando
-                necessario e a reagire in modo sicuro ed efficace in situazioni di conflitto. Inoltre, 
-                questi insegnamenti promuovono una maggiore fiducia in se stessi, riducendo il rischio di 
-                diventare vittime di bullismo o di aggressioni. L'autodifesa a scuola aiuta i bambini a 
-                sentirsi protetti, ma anche a sviluppare rispetto per gli altri, imparando l'importanza di 
-                difendersi senza ricorrere alla violenza. Avere una solida educazione alla sicurezza personale 
-                è un passo cruciale per formare adulti consapevoli e responsabili, in grado di affrontare le 
-                sfide della vita con maggiore resilienza.
-                </p>`,
+             L'autodifesa per i bambini a scuola è un aspetto fondamentale per garantire la loro sicurezza e 
+             benessere. Le scuole sono ambienti in cui i bambini interagiscono quotidianamente con i compagni 
+             e gli adulti, e in cui possono trovarsi esposti a situazioni di bullismo o comportamenti aggressivi.
+             Insegnare loro le basi dell'autodifesa non significa solo trasmettere tecniche fisiche, ma anche 
+             sviluppare abilità di consapevolezza situazionale e gestione delle emozioni. 
+             Attraverso l'autodifesa, i bambini imparano a riconoscere i segnali di pericolo, a dire “no” quando
+             necessario e a reagire in modo sicuro ed efficace in situazioni di conflitto. Inoltre, 
+             questi insegnamenti promuovono una maggiore fiducia in se stessi, riducendo il rischio di 
+             diventare vittime di bullismo o di aggressioni. L'autodifesa a scuola aiuta i bambini a 
+             sentirsi protetti, ma anche a sviluppare rispetto per gli altri, imparando l'importanza di 
+             difendersi senza ricorrere alla violenza. Avere una solida educazione alla sicurezza personale 
+             è un passo cruciale per formare adulti consapevoli e responsabili, in grado di affrontare le 
+             sfide della vita con maggiore resilienza.</p>`,
                 media: {
                     type: "iframe",
                     src: "https://www.youtube.com/embed/dAuBgAlzKNw?si=5EjkyYfdu7C1JS2f",
@@ -236,25 +239,25 @@
                 title: "I LIMITI DELL'AUTODIFESA",
                 content: `
              <h2>I LIMITI DELL'AUTODIFESA</h2>
-             <p>L'autodifesa è un diritto fondamentale che consente a una persona di proteggersi da aggressioni o minacce, ma deve essere esercitato con attenzione ai limiti legali. In generale, la legittima difesa è consentita solo se la risposta alla minaccia è proporzionata al pericolo. Questo significa che la reazione non deve essere superiore a quanto strettamente necessario per fermare l'aggressione. Se, per esempio, un'aggressione è fisica ma non grave, la risposta non può essere violenta o letale, come usare un'arma o colpire con eccessiva forza. La difesa deve sempre rispondere in modo adeguato alla gravità della situazione.
-                 La legge stabilisce dei confini chiari per evitare che l'autodifesa venga abusata. Se una persona 
-                 reagisce con violenza eccessiva o continuata dopo che il pericolo è cessato, può essere accusata di 
-                 eccesso di legittima difesa. Ad esempio, se un aggressore sta scappando o non è più pericoloso, 
-                 continuare ad attaccarlo è considerato abuso, e questo può comportare conseguenze legali. 
-                 L'autodifesa, quindi, deve cessare nel momento in cui la minaccia è neutralizzata, e l'aggressore
-                 non rappresenta più un pericolo.
-                 In alcuni casi, come quelli di violenza sessuale o aggressioni fisiche gravi, la legge è più 
-                 permissiva e consente l'uso di una forza maggiore per difendersi, ma sempre mantenendo una risposta 
-                 proporzionata. In queste circostanze, la persona aggredita può usare tecniche di autodifesa più 
-                 decise, ma non deve mai esagerare nell'applicare la violenza. La reazione deve essere sempre mirata 
-                 a fermare l'aggressione, non a infliggere danni ingiustificati.
-                 Un altro aspetto importante riguarda l'uso delle armi. La legge giustifica l'uso di un'arma solo 
-                 quando la vita o l'integrità fisica sono minacciate in modo grave e immediato. 
-                 Usare un'arma in situazioni di minore pericolo, come una semplice rissa, può essere considerato 
-                 un abuso della forza e comportare accuse di lesioni o aggressione. 
-                 L'uso di armi deve sempre essere un atto giustificato dalla situazione e deve essere proporzionato
-                 alla minaccia in corso.
-                 </p>`,
+             <p>
+            L'autodifesa è un diritto fondamentale che consente a una persona di proteggersi da aggressioni o minacce, ma deve essere esercitato con attenzione ai limiti legali. In generale, la legittima difesa è consentita solo se la risposta alla minaccia è proporzionata al pericolo. Questo significa che la reazione non deve essere superiore a quanto strettamente necessario per fermare l'aggressione. Se, per esempio, un'aggressione è fisica ma non grave, la risposta non può essere violenta o letale, come usare un'arma o colpire con eccessiva forza. La difesa deve sempre rispondere in modo adeguato alla gravità della situazione.
+             La legge stabilisce dei confini chiari per evitare che l'autodifesa venga abusata. Se una persona 
+             reagisce con violenza eccessiva o continuata dopo che il pericolo è cessato, può essere accusata di 
+             eccesso di legittima difesa. Ad esempio, se un aggressore sta scappando o non è più pericoloso, 
+             continuare ad attaccarlo è considerato abuso, e questo può comportare conseguenze legali. 
+             L'autodifesa, quindi, deve cessare nel momento in cui la minaccia è neutralizzata, e l'aggressore
+             non rappresenta più un pericolo.
+             In alcuni casi, come quelli di violenza sessuale o aggressioni fisiche gravi, la legge è più 
+             permissiva e consente l'uso di una forza maggiore per difendersi, ma sempre mantenendo una risposta 
+             proporzionata. In queste circostanze, la persona aggredita può usare tecniche di autodifesa più 
+             decise, ma non deve mai esagerare nell'applicare la violenza. La reazione deve essere sempre mirata 
+             a fermare l'aggressione, non a infliggere danni ingiustificati.
+             Un altro aspetto importante riguarda l'uso delle armi. La legge giustifica l'uso di un'arma solo 
+             quando la vita o l'integrità fisica sono minacciate in modo grave e immediato. 
+             Usare un'arma in situazioni di minore pericolo, come una semplice rissa, può essere considerato 
+             un abuso della forza e comportare accuse di lesioni o aggressione. 
+             L'uso di armi deve sempre essere un atto giustificato dalla situazione e deve essere proporzionato
+             alla minaccia in corso.</p>`,
                 media: {
                     type: "iframe",
                     src: "https://www.youtube.com/embed/y7h-SdaVagc?si=kPenxDabcwa4Xpuq",
@@ -264,12 +267,9 @@
 
         function updateContent() {
             const step = steps[currentStep];
-
-            // Aggiorna titolo e descrizione
             descrizione.innerHTML = step.content;
-
-            // Sostituzione immagine/video
             let newMedia;
+
             if (step.media.type === "img") {
                 newMedia = document.createElement("img");
                 newMedia.src = step.media.src;
@@ -285,8 +285,7 @@
                 newMedia.src = step.media.src;
                 newMedia.title = "YouTube video player";
                 newMedia.frameBorder = "0";
-                newMedia.allow =
-                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                newMedia.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
                 newMedia.referrerPolicy = "strict-origin-when-cross-origin";
                 newMedia.allowFullscreen = true;
                 newMedia.style.borderRadius = "10px";
@@ -295,6 +294,8 @@
             immagine.replaceWith(newMedia);
             immagine = newMedia;
         }
+
+        // SCORRIMENTO SLIDE
 
         arrowNext.addEventListener("click", () => {
             if (currentStep < steps.length - 1) {
